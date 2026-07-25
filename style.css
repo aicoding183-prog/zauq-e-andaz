@@ -1029,87 +1029,95 @@ footer {
         width: 100%;
     }
 }
+/* ================= MOBILE RESPONSIVE ================= */
 
-/* Mobile Responsive Fix */
-.container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
+@media (max-width:768px){
+
+header{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+padding:10px;
 }
 
-/* Product Grid */
-.product-grid, .categories {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Mobile = 1 column */
-  gap: 15px;
+.logo img{
+width:60px;
 }
 
-.product-card img, .category img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.brand{
+width:100%;
+text-align:center;
+margin-top:10px;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-  .product-grid, .categories {
-    grid-template-columns: repeat(2, 1fr); /* Tablet = 2 column */
-  }
+.brand h1{
+font-size:32px;
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-  .product-grid, .categories {
-    grid-template-columns: repeat(4, 1fr); /* PC = 4 column */
-  }
+.search-section{
+padding:10px;
+display:flex;
+gap:8px;
 }
 
-/* Header mobile ke liye */
-@media (max-width: 768px) {
-  .header { flex-direction: column; }
-  .top-bar .container { flex-direction: column; gap: 5px; }
+.search-section input{
+width:100%;
 }
 
-/* MOBILE DARAZ STYLE */
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Mobile me 2 products ek line me */
-  gap: 8px;
-  padding: 8px;
-  background: #f5f5f5;
+.features{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+padding:10px;
 }
 
-.product-card {
-  background: white;
-  border-radius: 6px;
-  padding: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+.category-container{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-bottom:10px;
 }
 
-.product-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
+.category-card{
+min-width:130px;
 }
 
-.product-name {
-  font-size: 13px;
-  height: 36px;
-  overflow: hidden;
-  margin: 5px 0;
+.product-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+padding:10px;
 }
 
-.price {
-  color: #ff5722; /* Daraz orange */
-  font-weight: bold;
-  font-size: 15px;
+.product-card img{
+height:160px;
+object-fit:cover;
 }
 
-.old-price {
-  text-decoration: line-through;
-  color: #999;
-  font-size: 11px;
-  margin-left: 4px;
+.newsletter{
+flex-direction:column;
+gap:20px;
+padding:20px;
+}
+
+.newsletter-form{
+width:100%;
+display:flex;
+}
+
+.newsletter-form input{
+flex:1;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+text-align:center;
+}
+
+.cart-sidebar{
+width:100%;
+}
+
 }
