@@ -349,25 +349,34 @@ function removeCartItem(index) {
     showToast("Item removed from cart");
 }
 
-// PRODUCT POPUP
-document.querySelectorAll('.product-card').forEach(card => {
-  card.addEventListener('click', function(e){
-    if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return; // button pe click ho to popup na khule
-    
-    let img = this.querySelector('img').src;
-    let title = this.querySelector('h3').innerText;
-    let price = this.querySelector('.new-price').innerText;
-    
-    document.getElementById('popupImg').src = img;
-    document.getElementById('popupTitle').innerText = title;
-    document.getElementById('popupPrice').innerText = price;
-    document.getElementById('productPopup').classList.add('active');
-  })
-})
+// PRODUCT POPUP FIXED
+function openPopup(card){
+  let img = card.querySelector('img').src;
+  let title = card.querySelector('h3').innerText;
+  let price = card.querySelector('.price-section') ? card.querySelector('.price-section').innerText : card.querySelector('.new-price').innerText;
+  
+  document.getElementById('popupImg').src = img;
+  document.getElementById('popupTitle').innerText = title;
+  document.getElementById('popupPrice').innerText = price;
+  document.getElementById('productPopup').classList.add('active');
+}
 
-document.getElementById('popupClose').onclick = () => {
-  document.getElementById('productPopup').classList.remove('active');
-}
-document.getElementById('productPopup').onclick = (e) => {
-  if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
-}
+// Sab product cards pe click lagao
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.cursor = 'pointer'; // hath wala cursor
+    card.addEventListener('click', function(e){
+      if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return; // button pe click ho to popup na khule
+      openPopup(this);
+    })
+  })
+
+  // Close button
+  document.getElementById('popupClose').onclick = () => {
+    document.getElementById('productPopup').classList.remove('active');
+  }
+  // Bahar click karo to band ho
+  document.getElementById('productPopup').onclick = (e) => {
+    if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
+  }
+})
