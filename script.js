@@ -349,10 +349,10 @@ function removeCartItem(index) {
     showToast("Item removed from cart");
 }
 
-// PRODUCT POPUP FINAL FIX
+// PRODUCT POPUP + LINK ROKO
 document.addEventListener('DOMContentLoaded', function(){
 
-  // 1. Popup close
+  // Popup band karne wala
   document.getElementById('popupClose').onclick = () => {
     document.getElementById('productPopup').classList.remove('active');
   }
@@ -360,20 +360,25 @@ document.addEventListener('DOMContentLoaded', function(){
     if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
   }
 
-  // 2. PRODUCT LIST PE CLICK SUNO - yehi trick hai
+  // MAIN TRICK: Link ko roko
   document.getElementById('product-list').addEventListener('click', function(e){
     
-    // Agar button pe click hua to popup na khule
+    // Sabse qareeb wala <a> tag dhoondo
+    let link = e.target.closest('a');
+    if(link) {
+      e.preventDefault(); // YEHI LINE LINK KO ROKEGI
+    }
+
+    // Button pe click ho to kuch na karo
     if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return;
     
-    // Sabse qareeb wala product-card dhoondo
+    // Card dhoondo
     let card = e.target.closest('.product-card');
     if(!card) return;
     
     let img = card.querySelector('img').src;
     let title = card.querySelector('h3').innerText;
-    let priceEl = card.querySelector('.price-section') || card;
-    let price = priceEl.innerText.match(/Rs\.\d+/g); // Rs.399 nikal lega
+    let price = card.innerText.match(/Rs\.\d+/g); 
     price = price ? price[price.length-1] : 'Rs.0';
     
     document.getElementById('popupImg').src = img;
