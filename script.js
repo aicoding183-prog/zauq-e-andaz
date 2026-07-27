@@ -333,7 +333,7 @@ function changeQuantity(index, amount) {
     if (!cart[index]) return;
 
     cart[index].quantity += amount;
-
+/
     if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
     }
@@ -349,10 +349,9 @@ function removeCartItem(index) {
     showToast("Item removed from cart");
 }
 
-// PRODUCT POPUP + LINK ROKO
+// PRODUCT POPUP FINAL
 document.addEventListener('DOMContentLoaded', function(){
 
-  // Popup band karne wala
   document.getElementById('popupClose').onclick = () => {
     document.getElementById('productPopup').classList.remove('active');
   }
@@ -360,22 +359,19 @@ document.addEventListener('DOMContentLoaded', function(){
     if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
   }
 
-  // MAIN TRICK: Link ko roko
-  document.getElementById('product-list').addEventListener('click', function(e){
+  // POORE DOCUMENT PE SUNO
+  document.addEventListener('click', function(e){
     
-    // Sabse qareeb wala <a> tag dhoondo
-    let link = e.target.closest('a');
-    if(link) {
-      e.preventDefault(); // YEHI LINE LINK KO ROKEGI
-    }
-
-    // Button pe click ho to kuch na karo
-    if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return;
-    
-    // Card dhoondo
     let card = e.target.closest('.product-card');
     if(!card) return;
+
+    // Agar button pe click hai to chor do
+    if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return;
     
+    // LINK KO ROKO
+    e.preventDefault(); 
+    e.stopPropagation(); // ye bhi zaroori hai
+
     let img = card.querySelector('img').src;
     let title = card.querySelector('h3').innerText;
     let price = card.innerText.match(/Rs\.\d+/g); 
@@ -385,6 +381,6 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('popupTitle').innerText = title;
     document.getElementById('popupPrice').innerText = price;
     document.getElementById('productPopup').classList.add('active');
-  })
+  }, true) // true lagana zaroori hai
 
 })
