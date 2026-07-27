@@ -348,3 +348,26 @@ function removeCartItem(index) {
     showCartItems();
     showToast("Item removed from cart");
 }
+
+// PRODUCT POPUP
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', function(e){
+    if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return; // button pe click ho to popup na khule
+    
+    let img = this.querySelector('img').src;
+    let title = this.querySelector('h3').innerText;
+    let price = this.querySelector('.new-price').innerText;
+    
+    document.getElementById('popupImg').src = img;
+    document.getElementById('popupTitle').innerText = title;
+    document.getElementById('popupPrice').innerText = price;
+    document.getElementById('productPopup').classList.add('active');
+  })
+})
+
+document.getElementById('popupClose').onclick = () => {
+  document.getElementById('productPopup').classList.remove('active');
+}
+document.getElementById('productPopup').onclick = (e) => {
+  if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
+}
