@@ -953,58 +953,60 @@ footer{
   }
 
 
-/* ===== MOBILE 2 PER ROW - BOOTSTRAP FIX FINAL ===== */
-@media screen and (max-width: 768px) {
-
-  /* Bootstrap ki col ko 50% kar do */
-  .col-6, 
-  .col-md-3,
-  .col-lg-3 {
+/* ===== NUKE CODE FOR MOBILE 2 PER ROW ===== */
+@media only screen and (max-width: 768px) {
+  
+  /* Sirf Trending Products section ko pakdo */
+  section:has(h2:contains("Trending Products")) .row > div,
+  .container .row > .col-6,
+  .container .row > .col-md-3,
+  .container .row > .col-lg-3 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
+    width: 50% !important;
     padding: 0 6px !important;
   }
 
-  /* Row ka gap theek karo */
   .row {
     margin-left: -6px !important;
     margin-right: -6px !important;
   }
 
-  /* Card bara karo */
-  .product-card {
-    width: 100% !important;
-    background: #fff !important;
-    border-radius: 10px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  /* Card ko Daraz jaisa banao */
+  .product-card, .card {
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) !important;
+    overflow: hidden !important;
     margin-bottom: 12px !important;
   }
 
-  .product-card img {
+  .product-card img, .card img {
+    height: 240px !important; /* BARI IMAGE */
     width: 100% !important;
-    height: 220px !important; /* Bara image */
     object-fit: cover !important;
-    border-radius: 10px 10px 0 0 !important;
   }
 
-  .product-card h3 {
-    font-size: 14px !important;
-    line-height: 18px !important;
-    height: 36px !important;
+  .product-card .card-body,
+  .product-card div {
+    padding: 8px !important;
+  }
+
+  .product-card h3, .product-title {
+    font-size: 13px !important;
+    height: 34px !important;
+    line-height: 17px !important;
     overflow: hidden !important;
-    margin: 8px !important;
+    margin-bottom: 4px !important;
   }
 
-  .product-card .price,
-  .new-price {
-    font-size: 17px !important;
-    color: #f85606 !important;
+  .product-card .price, .text-danger {
+    font-size: 16px !important;
     font-weight: 800 !important;
-    margin: 0 8px 8px 8px !important;
-    display: block !important;
+    color: #d10024 !important;
   }
 }
-
+    
 /* ===== DESKTOP 4 PER ROW ===== */
 @media screen and (min-width: 769px) {
   .col-md-3, .col-lg-3 {
