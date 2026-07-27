@@ -828,3 +828,38 @@ footer{
 }
 
 }
+
+.features .container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature-box{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.feature-box i{
+    font-size:28px;
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.feature-box h3{
+    margin:10px 0;
+}
+
+.feature-box p{
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+    .features .container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
