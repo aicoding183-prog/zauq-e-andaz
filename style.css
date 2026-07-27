@@ -315,6 +315,60 @@ font-size:12px;
 }
 
 }
+@media (max-width: 768px) {
+/* ===== PRODUCTS MOBILE 2 PER ROW ===== */
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+  padding: 10px !important;
+  background: #f5f5f5;
+}
+
+.product-card {
+  background: #fff !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+}
+
+.product-card img {
+  width: 100% !important;
+  height: 200px !important; /* BARI IMAGE */
+  object-fit: cover !important;
+}
+
+.product-info {
+  padding: 8px !important;
+}
+
+.product-info h3 {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  height: 34px !important;
+  overflow: hidden !important;
+  line-height: 17px !important;
+  margin: 5px 0 !important;
+}
+
+.new-price {
+  color: #f85606 !important; /* DARAZ ORANGE */
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+/* ===== PRODUCTS DESKTOP 4 PER ROW ===== */
+@media (min-width: 769px) {
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+    padding: 0 !important;
+    background: transparent;
+  }
+  .product-card img {
+    height: 240px !important;
+  }
 
 /* ===========================
    CATEGORIES
