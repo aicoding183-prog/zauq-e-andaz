@@ -953,43 +953,66 @@ footer{
   }
 
 
-/* ===== MOBILE 2 PER ROW - FINAL FIX ===== */
+/* ===== MOBILE 2 PER ROW - BOOTSTRAP FIX FINAL ===== */
 @media screen and (max-width: 768px) {
-  .product-grid,
-  .products-grid,
-  .row:has(.product-card) {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-    padding: 12px !important;
+
+  /* Bootstrap ki col ko 50% kar do */
+  .col-6, 
+  .col-md-3,
+  .col-lg-3 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 0 6px !important;
   }
 
-  /* Ye line add karo - col ko khatam karegi */
-  .product-grid > [class*="col-"],
-  .products-grid > [class*="col-"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: none !important;
-    padding: 0 !important;
+  /* Row ka gap theek karo */
+  .row {
+    margin-left: -6px !important;
+    margin-right: -6px !important;
   }
 
+  /* Card bara karo */
   .product-card {
     width: 100% !important;
     background: #fff !important;
     border-radius: 10px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0.1) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    margin-bottom: 12px !important;
   }
 
   .product-card img {
     width: 100% !important;
-    height: 220px !important; /* 180 se 220 kar diya bara karne ke liye */
+    height: 220px !important; /* Bara image */
     object-fit: cover !important;
+    border-radius: 10px 10px 0 0 !important;
   }
 
   .product-card h3 {
     font-size: 14px !important;
+    line-height: 18px !important;
     height: 36px !important;
+    overflow: hidden !important;
     margin: 8px !important;
+  }
+
+  .product-card .price,
+  .new-price {
+    font-size: 17px !important;
+    color: #f85606 !important;
+    font-weight: 800 !important;
+    margin: 0 8px 8px 8px !important;
+    display: block !important;
+  }
+}
+
+/* ===== DESKTOP 4 PER ROW ===== */
+@media screen and (min-width: 769px) {
+  .col-md-3, .col-lg-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+  }
+  .product-card img {
+    height: 240px !important;
   }
 }
 /* ===== DESKTOP 4 PER ROW ===== */
