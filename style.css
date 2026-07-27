@@ -1131,7 +1131,7 @@ footer{
     padding: 0 !important;
     overflow: hidden !important;
   }
-  .product-card img { height: 140px !important; width: 100% !important; }
+  .product-card img { height: 160px !important; width: 100% !important; }
   .product-info { padding: 8px !important; }
   .product-info h3 { font-size: 12px !important; height: 32px !important; overflow: hidden !important; margin-bottom: 4px !important; }
   .product-desc { display: none !important; }
