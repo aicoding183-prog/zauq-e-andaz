@@ -8,6 +8,34 @@
 
 <link rel="stylesheet" href="style.css">
 
+  <style>
+/* MOBILE DARAZ LAYOUT - SIRF MOBILE KE LIYE */
+@media only screen and (max-width: 768px) {
+  .top-bar { display: none !important; }
+  header { position: sticky !important; top: 0 !important; z-index: 999 !important; background:#fff !important; }
+  .header { display: grid !important; grid-template-columns: 40px 1fr 40px !important; gap: 8px !important; padding: 8px 0 !important; }
+  .logo img { width: 35px !important; height: 35px !important; }
+  .brand h1 { font-size: 15px !important; }
+  .brand p { font-size: 10px !important; }
+  .search-box { grid-column: 1 / 4 !important; margin-top: 8px !important; display: flex !important; }
+  .search-box input { flex:1 !important; height: 36px !important; }
+  .search-box button { height: 36px !important; }
+  .header-actions .icon-pill { display: none !important; }
+  
+  .category-grid { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 8px !important; }
+  .category-card img { width: 100% !important; height: 70px !important; object-fit: cover !important; }
+  .category-card h3 { font-size: 11px !important; text-align:center !important; }
+  
+  #product-list { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .product-card img { height: 150px !important; }
+  .product-info h3 { font-size: 12px !important; height: 34px !important; overflow: hidden !important; }
+  .product-desc { display: none !important; }
+  .cart-btn, .whatsapp-btn { width: 100% !important; font-size: 11px !important; padding: 6px !important; }
+  
+  #cartItems img { width: 70px !important; height: 70px !important; object-fit: cover !important; float: left !important; margin-right: 8px !important; }
+}
+</style>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
