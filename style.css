@@ -952,8 +952,19 @@ footer{
     padding: 6px 12px;
   }
 
+/* ===== DESKTOP 4 PER ROW ===== */
+@media screen and (min-width: 769px) {
+  .product-grid,
+  .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+  }
+  .product-card img {
+    height: 220px !important;
+  }
 
-/* ===== NUKE CODE FOR MOBILE 2 PER ROW ===== */
+    /* ===== NUKE CODE FOR MOBILE 2 PER ROW ===== */
 @media only screen and (max-width: 768px) {
   
   /* Sirf Trending Products section ko pakdo */
@@ -1006,25 +1017,3 @@ footer{
     color: #d10024 !important;
   }
 }
-    
-/* ===== DESKTOP 4 PER ROW ===== */
-@media screen and (min-width: 769px) {
-  .col-md-3, .col-lg-3 {
-    flex: 0 0 25% !important;
-    max-width: 25% !important;
-  }
-  .product-card img {
-    height: 240px !important;
-  }
-}
-/* ===== DESKTOP 4 PER ROW ===== */
-@media screen and (min-width: 769px) {
-  .product-grid,
-  .products-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 16px !important;
-  }
-  .product-card img {
-    height: 220px !important;
-  }
