@@ -1165,3 +1165,9 @@ footer{
   .qty-box button { width: 24px !important; height: 24px !important; }
   .remove-btn { font-size: 11px !important; color: #888 !important; }
 }
+
+    .product-popup { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index: 9999; display: none; align-items: center; justify-content: center; }
+.product-popup.active { display: flex; }
+.popup-content { background:#fff; width: 90%; max-width: 400px; border-radius: 12px; padding: 15px; position: relative; }
+.popup-content img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; }
+.popup-close { position: absolute; top:5px; right:15px; font-size: 28px; cursor: pointer; }
