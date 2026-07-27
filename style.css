@@ -1215,3 +1215,57 @@ footer{
     border-radius: 0 !important;
   }
 }
+    /* ===== CART PAGE COMPACT CODE ===== */
+@media only screen and (max-width: 768px) {
+
+  /* 1. Cart ka heading chota */
+  .cart-page h1, .shopping-cart h1 {
+    font-size: 18px !important;
+    padding: 10px !important;
+  }
+
+  /* 2. Cart me product ki image choti */
+  .cart-item img, .cart-product-image {
+    width: 80px !important;      /* Bari wali image choti */
+    height: 80px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  /* 3. Cart item ko side by side layout */
+  .cart-item, .cart-product {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+    padding: 10px !important;
+  }
+
+  /* 4. Cart me naam aur price chote */
+  .cart-item-name {
+    font-size: 13px !important;
+    margin-bottom: 4px !important;
+  }
+  .cart-item-price {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #c9a227 !important;
+  }
+
+  /* 5. Quantity box chota */
+  .cart-qty, .quantity {
+    width: 80px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+  }
+
+  /* 6. Total aur Button */
+  .cart-total {
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
+  .order-whatsapp-btn, .checkout-btn {
+    font-size: 14px !important;
+    padding: 12px !important;
+    height: 45px !important;
+  }
+}
