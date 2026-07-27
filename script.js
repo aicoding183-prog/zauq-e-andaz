@@ -349,34 +349,37 @@ function removeCartItem(index) {
     showToast("Item removed from cart");
 }
 
-// PRODUCT POPUP FIXED
-function openPopup(card){
-  let img = card.querySelector('img').src;
-  let title = card.querySelector('h3').innerText;
-  let price = card.querySelector('.price-section') ? card.querySelector('.price-section').innerText : card.querySelector('.new-price').innerText;
-  
-  document.getElementById('popupImg').src = img;
-  document.getElementById('popupTitle').innerText = title;
-  document.getElementById('popupPrice').innerText = price;
-  document.getElementById('productPopup').classList.add('active');
-}
-
-// Sab product cards pe click lagao
+// PRODUCT POPUP FINAL FIX
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.product-card').forEach(card => {
-    card.style.cursor = 'pointer'; // hath wala cursor
-    card.addEventListener('click', function(e){
-      if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return; // button pe click ho to popup na khule
-      openPopup(this);
-    })
-  })
 
-  // Close button
+  // 1. Popup close
   document.getElementById('popupClose').onclick = () => {
     document.getElementById('productPopup').classList.remove('active');
   }
-  // Bahar click karo to band ho
   document.getElementById('productPopup').onclick = (e) => {
     if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
   }
+
+  // 2. PRODUCT LIST PE CLICK SUNO - yehi trick hai
+  document.getElementById('product-list').addEventListener('click', function(e){
+    
+    // Agar button pe click hua to popup na khule
+    if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return;
+    
+    // Sabse qareeb wala product-card dhoondo
+    let card = e.target.closest('.product-card');
+    if(!card) return;
+    
+    let img = card.querySelector('img').src;
+    let title = card.querySelector('h3').innerText;
+    let priceEl = card.querySelector('.price-section') || card;
+    let price = priceEl.innerText.match(/Rs\.\d+/g); // Rs.399 nikal lega
+    price = price ? price[price.length-1] : 'Rs.0';
+    
+    document.getElementById('popupImg').src = img;
+    document.getElementById('popupTitle').innerText = title;
+    document.getElementById('popupPrice').innerText = price;
+    document.getElementById('productPopup').classList.add('active');
+  })
+
 })
