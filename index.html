@@ -6,12 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zauq-e-Andaz</title>
 
-<link rel="stylesheet" href="style.css?v=25">
+<link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -48,23 +51,21 @@
 
     <div class="header-actions">
       <div class="icon-pill"><i class="fa-regular fa-heart"></i> Wishlist</div>
-      <div class="cart" id="cartButton">
+      <div class="cart">
         <i class="fa-solid fa-cart-shopping"></i>
         <span>0</span>
       </div>
     </div>
   </div>
 
-  <nav class="main-nav">
-    <div class="container">
-      <a href="#" class="active">All Categories</a>
-      <a href="#">Jewellery</a>
-      <a href="#">Accessories</a>
-      <a href="#">New Arrivals</a>
-      <a href="#">Best Sellers</a>
-      <span class="offer-badge">🔥 Limited Offer: 1 Aug - 20 Aug</span>
-    </div>
-  </nav>
+  <nav>
+  <a href="#">All Categories</a>
+  <a href="#">Jewellery</a>
+  <a href="#">Accessories</a>
+  <a href="#">New Arrivals</a>
+  <a href="#">Best Sellers</a>
+  <span class="offer-badge">🔥 Limited Offer: 1 Aug - 20 Aug</span>
+</nav>
 </header>
 
 <section class="hero">
@@ -78,9 +79,18 @@
         <a href="#categories" class="ghost-btn">Explore Categories</a>
       </div>
       <div class="hero-stats">
-        <div><strong>500+</strong><span>Happy Customers</span></div>
-        <div><strong>24/7</strong><span>Support</span></div>
-        <div><strong>100%</strong><span>Secure Checkout</span></div>
+        <div>
+          <strong>500+</strong>
+          <span>Happy Customers</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>Support</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>Secure Checkout</span>
+        </div>
       </div>
     </div>
 
@@ -98,22 +108,56 @@
 
 <section class="features">
   <div class="container feature-grid">
-    <div class="feature-box"><i class="fa-solid fa-truck-fast"></i><h3>Fast Dispatch</h3><p>Quick processing for every order</p></div>
-    <div class="feature-box"><i class="fa-solid fa-credit-card"></i><h3>Secure Payment</h3><p>100% Safe Checkout</p></div>
-    <div class="feature-box"><i class="fa-solid fa-rotate-left"></i><h3>Easy Returns</h3><p>7 Days Return Policy</p></div>
-    <div class="feature-box"><i class="fa-solid fa-headset"></i><h3>24/7 Support</h3><p>Always Ready To Help</p></div>
+    <div class="feature-box">
+      <i class="fa-solid fa-truck-fast"></i>
+      <h3>Fast Dispatch</h3>
+      <p>Quick processing for every order</p>
+    </div>
+    <div class="feature-box">
+      <i class="fa-solid fa-credit-card"></i>
+      <h3>Secure Payment</h3>
+      <p>100% Safe Checkout</p>
+    </div>
+    <div class="feature-box">
+      <i class="fa-solid fa-rotate-left"></i>
+      <h3>Easy Returns</h3>
+      <p>7 Days Return Policy</p>
+    </div>
+    <div class="feature-box">
+      <i class="fa-solid fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>Always Ready To Help</p>
+    </div>
   </div>
 </section>
 
 <section class="categories" id="categories">
   <div class="container">
-    <div class="section-title"><h2>Shop By Category</h2><a href="#">See All</a></div>
+    <div class="section-title">
+      <h2>Shop By Category</h2>
+      <a href="#">See All</a>
+    </div>
     <div class="category-grid">
-      <div class="category-card"><img src="images/cat1.jpg" alt="Chain"><h3>Chain</h3></div>
-      <div class="category-card"><img src="images/cat2.jpg" alt="Bracelets"><h3>Bracelet</h3></div>
-      <div class="category-card"><img src="images/cat3.jpg" alt="Pendants"><h3>Pendant</h3></div>
-      <div class="category-card"><img src="images/cat4.jpg" alt="Rings"><h3>Ring</h3></div>
-      <div class="category-card"><img src="images/cat5.jpg" alt="New Arrivals"><h3>New Arrival</h3></div>
+      <div class="category-card">
+        <img src="images/cat1.jpg" alt="Chain">
+        <h3>Chain</h3>
+      </div>
+      <div class="category-card">
+        <img src="images/cat2.jpg" alt="Bracelets">
+        <h3>Bracelet</h3>
+      </div>
+      <div class="category-card">
+        <img src="images/cat3.jpg" alt="Pendants">
+        <h3>Pendant</h3>
+      </div>
+      <div class="category-card">
+        <img src="images/cat4.jpg" alt="Rings">
+        <h3>Ring</h3>
+      </div>
+      <div class="category-card">
+        <img src="images/cat5.jpg" alt="New Arrivals">
+        <h3>New Arrival</h3>
+      </div>
     </div>
   </div>
 </section>
@@ -121,49 +165,102 @@
 <section class="promo-strip">
   <div class="container promo-box">
     <div>
+      
       <h3>Flash <span>Sale</span></h3>
       <p>Best prices on premium accessories this week</p>
-      <span class="offer-badge">⏰ Limited Offer: 1 Aug - 20 Aug</span>
+      <span class="offer-badge">⏰ Limited Offer: 1 Aug - 20 Aug</span> <!-- YE NAYI LINE -->
     </div>
     <a href="#products" class="shop-btn small">Grab Deal</a>
   </div>
 </section>
+  
+</section>
 
 <section class="products" id="products">
   <div class="container">
-    <div class="section-title"><h2>Trending Products</h2><a href="#">View All →</a></div>
-    <div class="product-toolbar"><p id="productCount">Showing all products</p></div>
+    <div class="section-title">
+      <h2>Trending Products</h2>
+      <a href="#">View All →</a>
+    </div>
+    <div class="product-toolbar">
+      <p id="productCount">Showing all products</p>
+    </div>
     <div id="product-list" class="product-grid"></div>
   </div>
 </section>
 
 <section class="deal-banner">
   <div class="container deal-content">
-    <div><span class="hero-badge">Limited Time Offer</span><h3>Upgrade your look with premium accessories</h3><p>From everyday elegance to statement pieces, find your perfect match.</p></div>
+    <div>
+      <span class="hero-badge">Limited Time Offer</span>
+      <h3>Upgrade your look with premium accessories</h3>
+      <p>From everyday elegance to statement pieces, find your perfect match.</p>
+    </div>
     <a href="#products" class="shop-btn">Shop Now</a>
   </div>
 </section>
 
 <section class="newsletter">
   <div class="container newsletter-content">
-    <div><h2>Subscribe Our Newsletter</h2><p>Get updates about new arrivals, discounts and exclusive offers.</p></div>
-    <form class="newsletter-form"><input type="email" placeholder="Enter your email"><button type="submit">Subscribe</button></form>
+    <div>
+      <h2>Subscribe Our Newsletter</h2>
+      <p>Get updates about new arrivals, discounts and exclusive offers.</p>
+    </div>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
 </section>
 
 <footer>
   <div class="container footer-grid">
-    <div class="footer-box"><img src="images/logo.png" alt="Logo" class="footer-logo"><p>Premium jewellery & fashion accessories store in Pakistan.</p></div>
-    <div class="footer-box"><h3>Quick Links</h3><a href="#">Home</a><a href="#">Shop</a><a href="#">New Arrivals</a><a href="#">Contact</a></div>
-    <div class="footer-box"><h3>Customer Service</h3><a href="#">Shipping Policy</a><a href="#">Return Policy</a><a href="#">Privacy Policy</a><a href="#">FAQs</a></div>
-    <div class="footer-box"><h3>Contact</h3><p>📞 0311-2656159</p><p>📧 info@zauqeandaz.com</p><div class="social-icons"><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i><i class="fab fa-tiktok"></i><i class="fab fa-whatsapp"></i></div></div>
+    <div class="footer-box">
+      <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <p>Premium jewellery & fashion accessories store in Pakistan.</p>
+    </div>
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">New Arrivals</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-box">
+      <h3>Customer Service</h3>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Return Policy</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">FAQs</a>
+    </div>
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>📞 0311-2656159</p>
+      <p>📧 info@zauqeandaz.com</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </div>
   </div>
 </footer>
 
 <div class="cart-sidebar" id="cartSidebar">
-  <div class="cart-header"><h2>Shopping Cart</h2><span id="closeCart">&times;</span></div>
-  <div id="cartItems"><p class="empty-cart">Your cart is empty.</p></div>
-  <div class="cart-footer"><h3>Total : <span id="cartTotal">Rs.0</span></h3><button class="checkout-btn" onclick="orderCartWhatsApp()">ORDER ON WHATSAPP</button></div>
+  <div class="cart-header">
+    <h2>Shopping Cart</h2>
+    <span id="closeCart">&times;</span>
+  </div>
+
+  <div id="cartItems">
+    <p class="empty-cart">Your cart is empty.</p>
+  </div>
+
+  <div class="cart-footer">
+    <h3>Total : <span id="cartTotal">Rs.0</span></h3>
+    <button class="checkout-btn" onclick="orderCartWhatsApp()">ORDER ON WHATSAPP</button>
+  </div>
 </div>
 
 <div class="cart-overlay" id="cartOverlay"></div>
