@@ -1163,3 +1163,59 @@ footer{
   .qty-box button { width: 24px !important; height: 24px !important; }
   .remove-btn { font-size: 11px !important; color: #888 !important; }
 }
+/* Sirf mobile screens ke liye */
+@media (max-width: 768px) {
+  
+  /* 1. Background ko thora grey karein taake white cards numaya hon */
+  body {
+    background-color: #f5f5f5; 
+  }
+
+  /* 2. Grid Container (Jisme sare products hain) */
+  .product-grid { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1 line mein exact 2 products */
+    gap: 8px; /* Cards ke beech mein chota fasla (Daraz ki tarha) */
+    padding: 10px; /* Screen ke side par thori space */
+  }
+
+  /* 3. Product Card ka Design */
+  .product-card {
+    background-color: #ffffff; /* Card ka white color */
+    border-radius: 6px; /* Kinaray halke se gol */
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Halka sa shadow */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 4. Product ki Tasveer (Image) */
+  .product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Tasveer ko bilkul square (chaukor) rakhega */
+    object-fit: cover; /* Image stretch nahi hogi */
+  }
+
+  /* 5. Text ki Setting (Title aur Price) */
+  .product-info {
+    padding: 8px;
+  }
+
+  .product-title {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+    /* Agar naam lamba ho to 2 lines ke baad "..." aa jayega */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f57224; /* Daraz ka Orange/Red price color */
+    margin-top: 6px;
+  }
+}
