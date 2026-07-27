@@ -1069,3 +1069,97 @@ footer{
       .cart-sidebar .cart-footer { padding: 15px !important; }
       .checkout-btn { padding: 12px !important; font-size: 14px !important; }
     }
+
+    /* ========== DARAZ STYLE MOBILE LAYOUT ========== */
+@media only screen and (max-width: 768px) {
+
+  /* HEADER DARAZ JESA COMPACT */
+  .top-bar { display: none !important; }
+  header { padding: 8px !important; position: sticky !important; top: 0 !important; background: #fff !important; z-index: 999 !important; }
+  .header { display: grid !important; grid-template-columns: 35px 1fr 40px !important; gap: 8px !important; align-items: center !important; }
+  .logo img { width: 35px !important; height: 35px !important; }
+  .brand h1 { font-size: 14px !important; }
+  .brand p { font-size: 9px !important; }
+  .search-box { grid-column: 1 / 4 !important; margin-top: 8px !important; }
+  .search-box input { height: 34px !important; border-radius: 8px 0 0 8px !important; }
+  .search-box button { height: 34px !important; border-radius: 0 8px 8px 0 !important; }
+  .header-actions .icon-pill { display: none !important; }
+  .cart { position: relative !important; right: 0 !important; top: 0 !important; }
+
+  /* NAV HORIZONTAL SCROLL DARAZ JESA */
+  .main-nav { overflow-x: auto !important; white-space: nowrap !important; padding: 8px 0 !important; }
+  .main-nav .container { display: flex !important; gap: 15px !important; padding: 0 10px !important; }
+  .main-nav a { font-size: 12px !important; padding: 0 !important; }
+  .offer-badge { display: none !important; }
+
+  /* HERO KO CHOTA KARO */
+  .hero { padding: 10px 0 !important; }
+  .hero-content { flex-direction: column !important; }
+  .hero-left h1 { font-size: 20px !important; }
+  .hero-right { display: none !important; }
+  .hero-stats { display: flex !important; gap: 10px !important; justify-content: space-between !important; }
+
+  /* FEATURES 4 GRID */
+  .feature-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 5px !important; }
+  .feature-box { padding: 8px 4px !important; }
+  .feature-box i { font-size: 18px !important; }
+  .feature-box h3 { font-size: 10px !important; }
+  .feature-box p { display: none !important; }
+
+  /* CATEGORIES 5 PER ROW DARAZ JESA */
+  .category-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important; 
+    gap: 5px !important;
+    padding: 10px !important;
+  }
+  .category-card { background: #fff !important; border-radius: 8px !important; box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important; }
+  .category-card img { width: 100% !important; height: 70px !important; object-fit: cover !important; border-radius: 8px 8px 0 0 !important; }
+  .category-card h3 { font-size: 11px !important; text-align: center !important; padding: 5px !important; }
+
+  /* PRODUCTS 2 PER ROW + DARAZ CARD STYLE */
+  .product-grid, #product-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+  .product-card { 
+    border: 1px solid #eee !important; 
+    border-radius: 8px !important; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .product-card img { height: 140px !important; width: 100% !important; }
+  .product-info { padding: 8px !important; }
+  .product-info h3 { font-size: 12px !important; height: 32px !important; overflow: hidden !important; margin-bottom: 4px !important; }
+  .product-desc { display: none !important; }
+  .price-section { margin: 6px 0 !important; }
+  .new-price { font-size: 14px !important; color: #ff6600 !important; font-weight: 700 !important; }
+  .old-price { font-size: 10px !important; }
+  .rating { font-size: 10px !important; }
+  .cart-btn, .whatsapp-btn { 
+    width: 100% !important; 
+    font-size: 11px !important; 
+    padding: 6px !important; 
+    margin-top: 4px !important;
+    border-radius: 6px !important;
+  }
+  .whatsapp-btn { background: #25D366 !important; }
+
+  /* CART SIDEBAR DARAZ JESA */
+  .cart-sidebar { width: 100% !important; }
+  .cart-sidebar #cartItems img {
+    width: 70px !important;  
+    height: 70px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    float: left !important;
+    margin-right: 8px !important;
+  }
+  .cart-item-info h4 { font-size: 12px !important; }
+  .cart-item-info p { font-size: 12px !important; color: #ff6600 !important; }
+  .qty-box button { width: 24px !important; height: 24px !important; }
+  .remove-btn { font-size: 11px !important; color: #888 !important; }
+}
