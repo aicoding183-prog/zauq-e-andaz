@@ -1117,37 +1117,35 @@ footer{
   .category-card img { width: 100% !important; height: 70px !important; object-fit: cover !important; border-radius: 8px 8px 0 0 !important; }
   .category-card h3 { font-size: 11px !important; text-align: center !important; padding: 5px !important; }
 
-  /* PRODUCTS DARAZ STYLE - THORE BARE */
-#product-list { 
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important; 
-  gap: 8px !important;
-  padding: 8px !important;
-}
-.product-card { 
-  border: 1px solid #eee !important;
-  border-radius: 8px !important;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
-  padding: 8px !important; 
-  overflow: hidden !important;
-}
-.product-card img { height: 160px !important; width: 100% !important; object-fit: cover !important; } /* 150 se 160 kiya */
-.product-info { padding: 8px 0 !important; }
-.product-info h3 { font-size: 12px !important; height: 32px !important; overflow: hidden !important; }
-.product-desc { font-size: 10px !important; display: none !important; }
-.price-section { margin: 6px 0 !important; }
-.new-price { font-size: 14px !important; color: #ff6600 !important; font-weight: 700 !important; }
-.old-price { font-size: 10px !important; }
-.rating { font-size: 10px !important; }
-.cart-btn, .whatsapp-btn { 
-  width: 100% !important;
-  font-size: 10px !important; 
-  padding: 6px !important; 
-  margin-top: 4px !important;
-  border-radius: 6px !important;
-  border: none !important;
-} 
-.whatsapp-btn { background: #25D366 !important; }
+  /* PRODUCTS 2 PER ROW + DARAZ CARD STYLE */
+  .product-grid, #product-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+  .product-card { 
+    border: 1px solid #eee !important; 
+    border-radius: 8px !important; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .product-card img { height: 140px !important; width: 100% !important; }
+  .product-info { padding: 8px !important; }
+  .product-info h3 { font-size: 12px !important; height: 32px !important; overflow: hidden !important; margin-bottom: 4px !important; }
+  .product-desc { display: none !important; }
+  .price-section { margin: 6px 0 !important; }
+  .new-price { font-size: 14px !important; color: #ff6600 !important; font-weight: 700 !important; }
+  .old-price { font-size: 10px !important; }
+  .rating { font-size: 10px !important; }
+  .cart-btn, .whatsapp-btn { 
+    width: 100% !important; 
+    font-size: 11px !important; 
+    padding: 6px !important; 
+    margin-top: 4px !important;
+    border-radius: 6px !important;
+  }
   .whatsapp-btn { background: #25D366 !important; }
 
   /* CART SIDEBAR DARAZ JESA */
@@ -1165,29 +1163,3 @@ footer{
   .qty-box button { width: 24px !important; height: 24px !important; }
   .remove-btn { font-size: 11px !important; color: #888 !important; }
 }
-
-    /* PRODUCT POPUP FINAL */
-.product-popup { 
-  position: fixed; 
-  top:0; left:0; 
-  width:100%; height:100%; 
-  background: rgba(0,0,0,0.9); 
-  z-index: 99999 !important; /* SABSE BARA KAR DIYA */
-  display: none; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 10px;
-}
-.product-popup.active { display: flex !important; }
-.popup-content { 
-  background:#fff; 
-  width: 95%; 
-  max-width: 400px; 
-  border-radius: 12px; 
-  padding: 15px; 
-  position: relative;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-.popup-content img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
-.popup-close { position: absolute; top:5px; right:15px; font-size: 30px; cursor: pointer; font-weight: bold; }
