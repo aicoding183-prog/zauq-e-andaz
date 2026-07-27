@@ -333,7 +333,7 @@ function changeQuantity(index, amount) {
     if (!cart[index]) return;
 
     cart[index].quantity += amount;
-/
+// cart quantity check
     if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
     }
@@ -348,39 +348,51 @@ function removeCartItem(index) {
     showCartItems();
     showToast("Item removed from cart");
 }
+}
 
 // PRODUCT POPUP FINAL
 document.addEventListener('DOMContentLoaded', function(){
 
-  document.getElementById('popupClose').onclick = () => {
-    document.getElementById('productPopup').classList.remove('active');
-  }
-  document.getElementById('productPopup').onclick = (e) => {
-    if(e.target.id == 'productPopup') document.getElementById('productPopup').classList.remove('active');
+  // Popup HTML auto add
+  if(!document.getElementById('productPopup')){
+    document.body.insertAdjacentHTML('beforeend', `
+    <div class="product-popup" id="productPopup">
+      <div class="popup-content">
+        <span class="popup-close" id="popupClose">&times;</span>
+        <img id="popupImg" src="" alt="">
+        <h3 id="popupTitle"></h3>
+        <p id="popupPrice"></p>
+      </div>
+    </div>
+    `);
   }
 
-  // POORE DOCUMENT PE SUNO
+  // Close popup
   document.addEventListener('click', function(e){
-    
-    let card = e.target.closest('.product-card');
-    if(!card) return;
+    if(e.target.id == 'popupClose' || e.target.id == 'productPopup'){
+      document.getElementById('productPopup').classList.remove('active');
+    }
+  })
 
-    // Agar button pe click hai to chor do
-    if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return;
-    
-    // LINK KO ROKO
-    e.preventDefault(); 
-    e.stopPropagation(); // ye bhi zaroori hai
-
-    let img = card.querySelector('img').src;
-    let title = card.querySelector('h3').innerText;
-    let price = card.innerText.match(/Rs\.\d+/g); 
-    price = price ? price[price.length-1] : 'Rs.0';
-    
-    document.getElementById('popupImg').src = img;
-    document.getElementById('popupTitle').innerText = title;
-    document.getElementById('popupPrice').innerText = price;
-    document.getElementById('productPopup').classList.add('active');
-  }, true) // true lagana zaroori hai
+  // Product card pe click - 1 sec baad chalega taake products load ho jayen
+  setTimeout(() => {
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', function(e){
+        if(e.target.closest('.cart-btn') || e.target.closest('.whatsapp-btn')) return;
+        
+        e.preventDefault(); // link roko
+        
+        let img = this.querySelector('img').src;
+        let title = this.querySelector('h3').innerText;
+        let price = this.innerText.match(/Rs\.\d+/g); 
+        price = price ? price[price.length-1] : 'Rs.0';
+        
+        document.getElementById('popupImg').src = img;
+        document.getElementById('popupTitle').innerText = title;
+        document.getElementById('popupPrice').innerText = price;
+        document.getElementById('productPopup').classList.add('active');
+      })
+    })
+  }, 1000)
 
 })
