@@ -770,6 +770,8 @@ footer{
     font-size:14px;
 }
 
+}
+
 /* ===== MOBILE HERO FIX ===== */
 @media (max-width:768px){
 
@@ -862,4 +864,4 @@ footer{
     .features .container{
         grid-template-columns:repeat(2,1fr);
     }
-}
+} 
