@@ -8,31 +8,70 @@
 
 <link rel="stylesheet" href="style.css">
 
-  <style>
-/* MOBILE DARAZ LAYOUT - SIRF MOBILE KE LIYE */
+<style>
+/* ========== MOBILE = DESKTOP KO CHOTA KAR DO ========== */
 @media only screen and (max-width: 768px) {
-  .top-bar { display: none !important; }
-  header { position: sticky !important; top: 0 !important; z-index: 999 !important; background:#fff !important; }
-  .header { display: grid !important; grid-template-columns: 40px 1fr 40px !important; gap: 8px !important; padding: 8px 0 !important; }
-  .logo img { width: 35px !important; height: 35px !important; }
-  .brand h1 { font-size: 15px !important; }
+  
+  /* CONTAINER CHOTA KARO */
+  .container { padding: 0 10px !important; max-width: 100% !important; }
+  
+  /* HEADER SAME RAHE BAS CHOTA */
+  .header { gap: 10px !important; padding: 10px 0 !important; }
+  .logo img { width: 40px !important; }
+  .brand h1 { font-size: 16px !important; }
   .brand p { font-size: 10px !important; }
-  .search-box { grid-column: 1 / 4 !important; margin-top: 8px !important; display: flex !important; }
-  .search-box input { flex:1 !important; height: 36px !important; }
-  .search-box button { height: 36px !important; }
-  .header-actions .icon-pill { display: none !important; }
+  .search-box input { padding: 8px !important; font-size: 12px !important; }
+  .search-box button { padding: 8px 12px !important; font-size: 12px !important; }
+  .icon-pill { padding: 6px 8px !important; font-size: 11px !important; }
+  .cart { padding: 8px !important; }
+  .cart span { width: 16px !important; height: 16px !important; font-size: 9px !important; }
   
-  .category-grid { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 8px !important; }
-  .category-card img { width: 100% !important; height: 70px !important; object-fit: cover !important; }
-  .category-card h3 { font-size: 11px !important; text-align:center !important; }
-  
-  #product-list { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
-  .product-card img { height: 150px !important; }
-  .product-info h3 { font-size: 12px !important; height: 34px !important; overflow: hidden !important; }
-  .product-desc { display: none !important; }
-  .cart-btn, .whatsapp-btn { width: 100% !important; font-size: 11px !important; padding: 6px !important; }
-  
-  #cartItems img { width: 70px !important; height: 70px !important; object-fit: cover !important; float: left !important; margin-right: 8px !important; }
+  /* NAV SAME RAHE BAS SCROLL HO */
+  nav .container { gap: 12px !important; overflow-x: auto !important; padding-bottom: 8px !important; }
+  nav a { font-size: 12px !important; white-space: nowrap !important; }
+  .offer-badge { font-size: 10px !important; padding: 4px 8px !important; }
+
+  /* HERO SAME RAHE BAS SIDE BY SIDE */
+  .hero-content { flex-direction: row !important; gap: 15px !important; }
+  .hero-left h1 { font-size: 20px !important; }
+  .hero-left p { font-size: 12px !important; }
+  .hero-buttons { display: flex !important; gap: 8px !important; }
+  .shop-btn, .ghost-btn { padding: 8px 12px !important; font-size: 12px !important; }
+  .hero-right { width: 40% !important; }
+  .hero-stats { gap: 5px !important; }
+  .hero-stats div { padding: 6px !important; font-size: 10px !important; }
+
+  /* FEATURES 4 HI RAHE */
+  .feature-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 8px !important; }
+  .feature-box { padding: 10px 5px !important; }
+  .feature-box i { font-size: 18px !important; }
+  .feature-box h3 { font-size: 11px !important; }
+  .feature-box p { font-size: 9px !important; }
+
+  /* CATEGORIES 5 HI RAHE */
+  .category-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 8px !important; }
+  .category-card img { height: 80px !important; }
+  .category-card h3 { font-size: 11px !important; }
+
+  /* PRODUCTS SABSE IMPORTANT: 2 PER LINE */
+  #product-list { 
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 10px !important; 
+  }
+  .product-card { padding: 8px !important; }
+  .product-card img { height: 140px !important; }
+  .product-info h3 { font-size: 12px !important; }
+  .product-desc { font-size: 10px !important; height: 30px !important; }
+  .new-price { font-size: 13px !important; }
+  .old-price { font-size: 10px !important; }
+  .cart-btn, .whatsapp-btn { 
+    font-size: 10px !important; 
+    padding: 6px !important; 
+  }
+
+  /* FOOTER SAME RAHE */
+  .footer-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
 }
 </style>
 
