@@ -925,3 +925,22 @@ footer{
         font-size:24px;
     }
 }
+
+.offer-badge {
+  background: #D4AF37; /* golden */
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.3);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+ 0% { transform: scale(1); }
+ 50% { transform: scale(1.06); }
+ 100% { transform: scale(1); }
+}
