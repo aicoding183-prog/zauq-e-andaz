@@ -953,31 +953,45 @@ footer{
   }
 
 
-/* ===== MOBILE 2 PER ROW - SAFE CODE ===== */
+/* ===== MOBILE 2 PER ROW - FINAL FIX ===== */
 @media screen and (max-width: 768px) {
   .product-grid,
   .products-grid,
-  [class*="product"] > div[class*="grid"] {
+  .row:has(.product-card) {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
-    padding: 8px !important;
+    gap: 12px !important;
+    padding: 12px !important;
+  }
+
+  /* Ye line add karo - col ko khatam karegi */
+  .product-grid > [class*="col-"],
+  .products-grid > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
   }
 
   .product-card {
     width: 100% !important;
     background: #fff !important;
-    border-radius: 8px !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0.1) !important;
   }
 
   .product-card img {
     width: 100% !important;
-    height: 180px !important;
+    height: 220px !important; /* 180 se 220 kar diya bara karne ke liye */
     object-fit: cover !important;
   }
-}
 
+  .product-card h3 {
+    font-size: 14px !important;
+    height: 36px !important;
+    margin: 8px !important;
+  }
+}
 /* ===== DESKTOP 4 PER ROW ===== */
 @media screen and (min-width: 769px) {
   .product-grid,
@@ -989,4 +1003,3 @@ footer{
   .product-card img {
     height: 220px !important;
   }
-}
