@@ -1219,3 +1219,75 @@ footer{
     margin-top: 6px;
   }
 }
+
+    @media (max-width:768px){
+
+.container{
+    width:100%;
+    padding:0 12px;
+}
+
+.header{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+}
+
+.brand{
+    flex:1;
+}
+
+.brand h1{
+    font-size:20px;
+}
+
+.search-box{
+    width:100%;
+    order:3;
+}
+
+.search-box input{
+    width:100%;
+}
+
+.header-actions{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+}
+
+nav{
+    display:flex;
+    overflow-x:auto;
+    white-space:nowrap;
+    gap:15px;
+    padding:12px;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+}
+
+.hero-right img{
+    width:100%;
+}
+
+.product-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.category-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+}
