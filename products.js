@@ -7,7 +7,7 @@ const products = [
     tag:"Best Sellers",
     desc:"Elegant black stone chain with a premium finish.",
     oldPrice:499,
-    price:399,
+    price:349,
     image:"images/product1.jpg",
     sale:true
 },
@@ -18,8 +18,8 @@ const products = [
     category:"Jewellery",
     tag:"New Arrivals",
     desc:"Minimal bar pendant chain for everyday luxury.",
-    oldPrice:499,
-    price:349,
+    oldPrice:399,
+    price:299,
     image:"images/product2.jpg",
     sale:true
 },
