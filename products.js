@@ -78,8 +78,8 @@ const products = [
     category:"Accessories",
     tag:"Best Sellers",
     desc:"Stylish leather bracelet set with braided, stitch and plain designs. Perfect combo for men.",
-    oldPrice:999,
-    price:799,
+    oldPrice:800,
+    price:549,
     image:"images/product6.jpg",
     sale:true
 },
