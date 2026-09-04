@@ -19,7 +19,7 @@ const products = [
     tag:"New Arrivals",
     desc:"Minimal bar pendant chain for everyday luxury.",
     oldPrice:399,
-    price:299,
+    price:199,
     image:"images/product2.jpg",
     sale:true
 },
@@ -30,8 +30,8 @@ const products = [
     category:"Accessories",
     tag:"New Arrivals",
     desc:"Polished silver cuff designed for a bold style.",
-    oldPrice:399,
-    price:299,
+    oldPrice:349,
+    price:249,
     image:"images/product3.jpg",
     sale:false
 },
@@ -67,7 +67,7 @@ const products = [
     tag:"Best Sellers",
     desc:"Stylish silver dumbbell necklace. Durable chain and modern gym design.",
     oldPrice:599,
-    price:449,
+    price:399,
     image:"images/product5.jpg",
     sale:true
 },
