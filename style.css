@@ -953,19 +953,23 @@ footer{
   }
 }
 
-/* ===== FINAL MOBILE SIZE FIX ===== */
+/* ==== DARAZ APP SIZE - 2 PRODUCTS ==== */
 @media (max-width: 768px){
-  .products, .trending-products, .products-grid, .product-grid,
-  #trending-products, #products, .shop-products {
+  .products, .trending-products, .products-grid, .product-grid, #trending-products, #products, .shop-products {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 10px !important;
+    padding: 10px !important;
+    background: #f5f5f5 !important;
   }
   .product-card {
+    background: white !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
     width: 100% !important;
   }
-  .product-card img{
-    height: 230px !important;
+  .product-card img {
+    height: 175px !important;
     object-fit: cover !important;
   }
 }
