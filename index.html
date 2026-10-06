@@ -255,8 +255,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     <p class="empty-cart">Your cart is empty.</p>
   </div>
 
-  <div class="cart-footer">
-    <h3>Total : <span id="cartTotal">Rs.0</span></h3>
+    <div class="cart-footer">
+    <div style="margin-bottom:12px;">
+      <div style="display:flex; justify-content:space-between;">
+        <span>Subtotal:</span> <span id="cartSubtotal">Rs.0</span>
+      </div>
+      <div style="display:flex; justify-content:space-between;">
+        <span>Delivery:</span> <span>Rs.350</span>
+      </div>
+      <h3 style="display:flex; justify-content:space-between; border-top:1px dashed #ccc; padding-top:8px; margin:0;">
+        <span>Total:</span> <span id="cartTotal">Rs.0</span>
+      </h3>
+    </div>
     <button class="checkout-btn" onclick="orderCartWhatsApp()">ORDER ON WHATSAPP</button>
   </div>
 </div>
