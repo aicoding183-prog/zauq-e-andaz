@@ -954,7 +954,17 @@ footer{
 }
 /* DARAZ 2 MOTI CARD - FINAL */
 @media (max-width: 768px){
-  .container{width:100% !important; max-width:100% !important; padding:0 10px !important;}
-  .products{grid-template-columns:1fr 1fr !important; gap:10px !important;}
-  .product-card{width:100% !important; min-width:0 !important;}
+  .container{
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 10px !important;
+  }
+  .products{
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+  }
+  .product-card{
+    width:100% !important;
+    min-width:0 !important;
+  }
 }
