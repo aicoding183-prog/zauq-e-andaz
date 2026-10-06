@@ -952,34 +952,9 @@ footer{
     padding: 6px 12px;
   }
 }
-
-/* ==== FINAL DARAZ FIX - 2 MOTI CARD ==== */
+/* DARAZ 2 MOTI CARD - FINAL */
 @media (max-width: 768px){
-  body { overflow-x: hidden !important; }
-  .products, .product-grid, .products-grid, #trending-products, #products {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10px !important;
-    width: 100% !important;
-    padding: 10px !important;
-    box-sizing: border-box !important;
-  }
-  .product-card {
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    background: #fff !important;
-    border-radius: 10px !important;
-    overflow: hidden !important;
-  }
-  .product-card img {
-    width: 100% !important;
-    height: 180px !important;
-    object-fit: cover !important;
-  }
-}
-@media (max-width: 768px){
-  .container{width:100% !important; max-width:100% !important;}
-  .products{grid-template-columns:1fr 1fr !important; width:100vw !important;}
-  .product-card{width:100% !important; min-width:0 !important; margin:0 !important;}
+  .container{width:100% !important; max-width:100% !important; padding:0 10px !important;}
+  .products{grid-template-columns:1fr 1fr !important; gap:10px !important;}
+  .product-card{width:100% !important; min-width:0 !important;}
 }
