@@ -977,6 +977,7 @@ footer{
     height: 180px !important;
     object-fit: cover !important;
   }
+}
 @media (max-width: 768px){
   .container{width:100% !important; max-width:100% !important;}
   .products{grid-template-columns:1fr 1fr !important; width:100vw !important;}
