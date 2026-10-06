@@ -952,12 +952,14 @@ footer{
     padding: 6px 12px;
   }
 }
-}
-}
 
-/* ===== FINAL MOBILE SIZE FIX - Tumhara wala ===== */
+/* ===== FINAL MOBILE SIZE FIX ===== */
 @media (max-width: 768px){
-  .products, .trending-products, .products-grid {
+  .products, .trending-products, .products-grid, .product-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .product-card img{
+    height: 190px !important;
   }
 }
