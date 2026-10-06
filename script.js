@@ -184,16 +184,19 @@ categoryLinks.forEach(link => {
 
 function orderWhatsApp(productName, price) {
     const number = "923112656159";
+    const delivery = 350;
+    const total = parseInt(price) + delivery;
     const message = `Assalam O Alaikum,
 
 I want to order:
 
 Product: ${productName}
-Price: Rs.${price}`;
+Price: Rs.${price}
+Delivery Charges: Rs.${delivery}
+Total: Rs.${total}`;
 
-    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
 }
-
 // ===============================
 // WISHLIST
 // ===============================
