@@ -968,3 +968,36 @@ footer{
     min-width:0 !important;
   }
 }
+/* DARAZ CART - CHOTA STYLE */
+.cart-item, .shopping-cart-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 10px !important;
+  border-bottom: 1px solid #eee !important;
+  background: #fff !important;
+}
+.cart-item img, .shopping-cart img, #cart img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  flex-shrink: 0 !important;
+}
+.cart-item-details, .cart-details {
+  flex: 1 !important;
+}
+.cart-item img {
+  max-width: 80px !important;
+}
+#cart .product-image, .cart-drawer img {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+/* Cart ko Daraz jaisa list banao */
+#shopping-cart, .cart-container {
+  display: flex !important;
+  flex-direction: column !important;
+}
