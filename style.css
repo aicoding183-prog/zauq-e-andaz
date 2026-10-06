@@ -968,22 +968,20 @@ footer{
     min-width:0 !important;
   }
 }
-/* FINAL CART FIX - DARAZ Jaisa Chota */
-#cart img, .cart img, .shopping-cart img,
-.cart-sidebar img, #cart-items img,
-.cart-item img, .cart-drawer img {
-  width: 80px !important;
-  height: 80px !important;
-  max-width: 80px !important;
+/* CART KO CHOTA - FINAL */
+#cart-items img,
+#cart-items > div img,
+#cart-items > div > div img {
+  width: 70px !important;
+  height: 70px !important;
+  min-width: 70px !important;
+  max-width: 70px !important;
   object-fit: cover !important;
-  border-radius: 8px !important;
+  border-radius: 6px !important;
 }
-.cart-item, #cart > div, .cart-product,
 #cart-items > div {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 12px !important;
-  padding: 10px !important;
-  border-bottom: 1px solid #eee !important;
-}
+  gap:10px !important;
+ }
