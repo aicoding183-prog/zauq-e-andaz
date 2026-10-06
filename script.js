@@ -270,29 +270,19 @@ function orderCartWhatsApp() {
         showToast("Your cart is empty");
         return;
     }
-
-    let message = `Assalam O Alaikum,
-
-I want to order:
-
-`;
-
-    let total = 0;
-
-    cart.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} x${item.quantity} - Rs.${item.price * item.quantity}\n`;
-        total += item.price * item.quantity;
+    let subtotal = 0;
+    let itemsText = "";
+    cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+        itemsText += `${item.name} x${item.quantity} - Rs.${item.price}\n`;
     });
+    let delivery = 350;
+    let grandTotal = subtotal + delivery;
 
-    message += `
-
-Total: Rs.${total}`;
-
-    const number = "923112656159";
-
-    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, "_blank");
+    let message = `Assalam O Alaikum,\n\nI want to order:\n\n${itemsText}\nSubtotal: Rs.${subtotal}\nDelivery Charges: Rs.${delivery}\nTotal: Rs.${grandTotal}`;
+    
+    window.open(`https://wa.me/923112656159?text=${encodeURIComponent(message)}`, '_blank');
 }
-
 function showCartItems() {
     const cartItems = document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
