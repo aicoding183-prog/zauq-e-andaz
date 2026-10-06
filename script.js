@@ -286,6 +286,7 @@ function orderCartWhatsApp() {
 function showCartItems() {
     const cartItems = document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
+    const cartSubtotal = document.getElementById("cartSubtotal");
 
     if (!cartItems) return;
 
@@ -294,7 +295,8 @@ function showCartItems() {
     let total = 0;
 
     if (cart.length === 0) {
-        cartItems.innerHTML = `<p class="empty-cart">Your cart is empty.</p>`;
+        cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+        if(cartSubtotal) cartSubtotal.innerHTML = "Rs.0";
         cartTotal.innerHTML = "Rs.0";
         return;
     }
@@ -307,7 +309,7 @@ function showCartItems() {
                 <img src="${item.image}" alt="${item.name}">
                 <div>
                     <h4>${item.name}</h4>
-                    <p>Rs.${item.price * item.quantity}</p>
+                    <p>Rs.${item.price} x ${item.quantity}</p>
                     <div class="quantity-box">
                         <button onclick="changeQuantity(${index}, -1)">-</button>
                         <span>${item.quantity}</span>
@@ -319,9 +321,12 @@ function showCartItems() {
         `;
     });
 
-    cartTotal.innerHTML = "Rs." + total;
-}
+    let delivery = 350;
+    let grandTotal = total + delivery;
 
+    if(cartSubtotal) cartSubtotal.innerHTML = `Rs.${total}`;
+    cartTotal.innerHTML = `Rs.${grandTotal}`;
+}
 function changeQuantity(index, amount) {
     if (!cart[index]) return;
 
