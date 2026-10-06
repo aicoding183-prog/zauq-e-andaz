@@ -955,11 +955,17 @@ footer{
 
 /* ===== FINAL MOBILE SIZE FIX ===== */
 @media (max-width: 768px){
-  .products, .trending-products, .products-grid, .product-grid {
+  .products, .trending-products, .products-grid, .product-grid,
+  #trending-products, #products, .shop-products {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
   }
+  .product-card {
+    width: 100% !important;
+  }
   .product-card img{
-    height: 190px !important;
+    height: 230px !important;
+    object-fit: cover !important;
   }
 }
