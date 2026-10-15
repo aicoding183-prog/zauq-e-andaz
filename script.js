@@ -54,7 +54,7 @@ function renderProducts(productList) {
 
     productList.forEach(product => {
         productContainer.innerHTML += `
-            <div class="product-card">
+            <div class="product-card" onclick="window.location.href='product.html?id=${product.id}'" style="cursor:pointer">
                 ${product.sale ? `<div class="sale-badge">Hot Deal</div>` : ""}
                 <img src="${product.image}" alt="${product.name}">
                 <div class="product-info">
@@ -68,11 +68,11 @@ function renderProducts(productList) {
                         <span class="old-price">Rs.${product.oldPrice}</span>
                         <span class="new-price">Rs.${product.price}</span>
                     </div>
-                    <button class="cart-btn" onclick="addToCart(${product.id})">
+                    <button class="cart-btn" onclick="event.stopPropagation(); addToCart(${product.id})">
                         <i class="fa-solid fa-cart-shopping"></i>
                         ADD TO CART
                     </button>
-                    <button class="whatsapp-btn" onclick="orderWhatsApp('${product.name}', ${product.price})">
+                    <button class="whatsapp-btn" onclick="event.stopPropagation(); orderWhatsApp('${product.name}', ${product.price})">
                         <i class="fa-brands fa-whatsapp"></i>
                         ORDER ON WHATSAPP
                     </button>
