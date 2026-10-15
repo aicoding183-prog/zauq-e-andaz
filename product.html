@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product - Zauq-e-Andaz</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+#detailWrap{max-width:1200px;margin:30px auto;padding:0 20px;display:flex;gap:40px;flex-wrap:wrap}
+.d-img{flex:1;min-width:320px;background:#fff;padding:15px;border-radius:16px}
+.d-img img{width:100%;border-radius:16px}
+.d-info{flex:1;min-width:320px}
+.price{font-size:28px;font-weight:700;margin:15px 0}
+.price .old{font-size:18px;color:#999;text-decoration:line-through;margin-left:10px}
+.btns{display:flex;gap:12px;margin-top:20px}
+.btns button{padding:14px 22px;border:none;border-radius:10px;font-weight:600;cursor:pointer}
+.b1{background:#111;color:#fff} .b2{background:#25D366;color:#fff}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-left"><i class="fa-solid fa-truck"></i> Free delivery above Rs.1500</div>
+    <div class="top-right"><i class="fa-solid fa-phone"></i> 0311-2656159</div>
+  </div>
+</div>
+
+<header>
+  <div class="container header">
+    <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+    <div class="brand"><h1>Zauq-e-Andaz</h1><p>Fashion Accessories</p></div>
+    <div class="header-actions">
+      <a href="index.html" style="text-decoration:none"><div class="icon-pill">Home</div></a>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i><span>0</span></div>
+    </div>
+  </div>
+</header>
+
+<a href="index.html" style="display:block;max-width:1200px;margin:20px auto;padding:0 20px">← Back to Shop</a>
+
+<div id="detailWrap">Loading...</div>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+<script>
+const urlId = new URLSearchParams(window.location.search).get('id');
+const p = products.find(x => x.id == urlId);
+const w = document.getElementById('detailWrap');
+if(p){
+  document.title = p.name + ' - Zauq-e-Andaz';
+  w.innerHTML = `
+    <div class="d-img"><img src="${p.image}"></div>
+    <div class="d-info">
+      <span style="background:#000;color:#fff;padding:5px 12px;border-radius:20px;font-size:12px">${p.tag}</span>
+      <h1 style="margin:10px 0 5px 0">${p.name}</h1>
+      <p style="color:#666;line-height:1.6">${p.desc}</p>
+      <div class="price">Rs.${p.price} <span class="old">Rs.${p.oldPrice}</span></div>
+      <p><b>Category:</b> ${p.category}</p>
+      <div class="btns">
+        <button class="b1" onclick="addToCart(${p.id})">ADD TO CART</button>
+        <a href="https://wa.me/923112656159?text=Salam! Mujhe ye chahiye:%0A${p.name}%0ARs.${p.price}%0A${window.location.href}" target="_blank">
+          <button class="b2">ORDER ON WHATSAPP</button>
+        </a>
+      </div>
+    </div>`;
+} else {
+  w.innerHTML = '<h2>Product nahi mila, <a href="index.html">wapas jayen</a></h2>';
+}
+</script>
+</body>
+</html>
