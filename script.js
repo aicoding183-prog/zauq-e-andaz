@@ -138,21 +138,30 @@ loadProducts();
 // ADD TO CART
 // ===============================
 
+
 function addToCart(id) {
-    const product = products.find(p => p.id === id);
+    const product = products.find(
+        p => String(p.id) === String(id)
+    );
+
     if (!product) return;
 
-    const existing = cart.find(item => item.id === id);
+    const existing = cart.find(
+        item => String(item.id) === String(product.id)
+    );
 
     if (existing) {
         existing.quantity += 1;
     } else {
-        cart.push({ ...product, quantity: 1 });
+        cart.push({
+            ...product,
+            quantity: 1
+        });
     }
 
     saveCart();
     updateCartCounter();
-    showToast(`${product.name} added to cart`);
+    showToast(product.name + " added to cart");
     showCartItems();
 }
 
