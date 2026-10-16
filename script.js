@@ -2,7 +2,24 @@
 // ZAUQ-E-ANDAZ SCRIPT
 // ===============================
 
+
 let cart = [];
+
+try {
+    const savedCart = JSON.parse(
+        localStorage.getItem("zauqCart") || "[]"
+    );
+
+    if (Array.isArray(savedCart)) {
+        cart = savedCart;
+    }
+} catch (error) {
+    cart = [];
+}
+
+function saveCart() {
+    localStorage.setItem("zauqCart", JSON.stringify(cart));
+}
 let cartCount = 0;
 
 const productContainer = document.getElementById("product-list");
@@ -133,6 +150,7 @@ function addToCart(id) {
         cart.push({ ...product, quantity: 1 });
     }
 
+    saveCart();
     updateCartCounter();
     showToast(`${product.name} added to cart`);
     showCartItems();
