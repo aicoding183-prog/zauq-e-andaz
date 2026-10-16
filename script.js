@@ -1,5 +1,5 @@
 // ===============================
-// ZAUQ-E-ANDAZ SCRIPT - FINAL FIXED
+// ZAUQ-E-ANDAZ SCRIPT
 // ===============================
 
 let cart = [];
@@ -55,7 +55,7 @@ function renderProducts(productList) {
     productList.forEach(product => {
         productContainer.innerHTML += `
             <div class="product-card" onclick="window.location.href='product.html?id=${product.id}'" style="cursor:pointer">
-                ${product.sale? `<div class="sale-badge">Hot Deal</div>` : ""}
+                ${product.sale ? `<div class="sale-badge">Hot Deal</div>` : ""}
                 <img src="${product.image}" alt="${product.name}">
                 <div class="product-info">
                     <div class="product-meta">
@@ -87,15 +87,16 @@ function renderProducts(productList) {
 function updateProductCount(count) {
     const countText = document.getElementById('productCount');
     if (!countText) return;
-    countText.textContent = count === 0? 'No products available for this filter.' : `Showing ${count} product${count === 1? '' : 's'}`;
+    countText.textContent = count === 0 ? 'No products available for this filter.' : `Showing ${count} product${count === 1 ? '' : 's'}`;
 }
 
 function normalizeText(value) {
-    return value? value.toString().trim().toLowerCase() : '';
+    return value ? value.toString().trim().toLowerCase() : '';
 }
 
 function filterProducts() {
     const searchTerm = normalizeText(activeSearch);
+
     const filtered = products.filter(product => {
         const productCategory = normalizeText(product.category);
         const productTag = normalizeText(product.tag);
@@ -106,6 +107,7 @@ function filterProducts() {
             || normalizeText(product.desc).includes(searchTerm);
         return matchesFilter && matchesSearch;
     });
+
     renderProducts(filtered);
 }
 
@@ -122,12 +124,15 @@ loadProducts();
 function addToCart(id) {
     const product = products.find(p => p.id === id);
     if (!product) return;
+
     const existing = cart.find(item => item.id === id);
+
     if (existing) {
         existing.quantity += 1;
     } else {
-        cart.push({...product, quantity: 1 });
+        cart.push({ ...product, quantity: 1 });
     }
+
     updateCartCounter();
     showToast(`${product.name} added to cart`);
     showCartItems();
@@ -142,7 +147,7 @@ const searchButton = document.getElementById("searchButton");
 const categoryLinks = document.querySelectorAll('.main-nav a');
 
 function applySearch() {
-    activeSearch = searchInput? searchInput.value : '';
+    activeSearch = searchInput ? searchInput.value : '';
     filterProducts();
 }
 
@@ -189,14 +194,15 @@ Product: ${productName}
 Price: Rs.${price}
 Delivery Charges: Rs.${delivery}
 Total: Rs.${total}`;
+
     window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
 }
-
 // ===============================
 // WISHLIST
 // ===============================
 
 const heart = document.querySelector(".fa-heart");
+
 if (heart) {
     heart.addEventListener("click", () => {
         heart.classList.toggle("fa-solid");
@@ -206,7 +212,7 @@ if (heart) {
 }
 
 // ===============================
-// CART SIDEBAR - YEHI MISS HO GAYA THA
+// CART SIDEBAR
 // ===============================
 
 const cartIcon = document.querySelector(".cart");
@@ -220,12 +226,14 @@ if (cartIcon) {
         cartOverlay.classList.add("active");
     });
 }
+
 if (closeCart) {
     closeCart.addEventListener("click", () => {
         cartSidebar.classList.remove("active");
         cartOverlay.classList.remove("active");
     });
 }
+
 if (cartOverlay) {
     cartOverlay.addEventListener("click", () => {
         cartSidebar.classList.remove("active");
@@ -238,6 +246,7 @@ if (cartOverlay) {
 // ===============================
 
 const newsletter = document.querySelector(".newsletter-form");
+
 if (newsletter) {
     newsletter.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -269,33 +278,32 @@ function orderCartWhatsApp() {
     });
     let delivery = 350;
     let grandTotal = subtotal + delivery;
+
     let message = `Assalam O Alaikum,\n\nI want to order:\n\n${itemsText}\nSubtotal: Rs.${subtotal}\nDelivery Charges: Rs.${delivery}\nTotal: Rs.${grandTotal}`;
+    
     window.open(`https://wa.me/923112656159?text=${encodeURIComponent(message)}`, '_blank');
 }
-
-// ===============================
-// CART ITEMS - DELIVERY FIXED
-// ===============================
 function showCartItems() {
     const cartItems = document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
     const cartSubtotal = document.getElementById("cartSubtotal");
-    const cartDelivery = document.getElementById("cartDelivery");
 
     if (!cartItems) return;
+
     cartItems.innerHTML = "";
+
     let total = 0;
 
     if (cart.length === 0) {
         cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
         if(cartSubtotal) cartSubtotal.innerHTML = "Rs.0";
-        if(cartDelivery) cartDelivery.innerHTML = "Rs.0";
-        if(cartTotal) cartTotal.innerHTML = "Rs.0";
+        cartTotal.innerHTML = "Rs.0";
         return;
     }
 
     cart.forEach((item, index) => {
         total += item.price * item.quantity;
+
         cartItems.innerHTML += `
             <div class="cart-product">
                 <img src="${item.image}" alt="${item.name}">
@@ -317,16 +325,17 @@ function showCartItems() {
     let grandTotal = total + delivery;
 
     if(cartSubtotal) cartSubtotal.innerHTML = `Rs.${total}`;
-    if(cartDelivery) cartDelivery.innerHTML = `Rs.${delivery}`;
-    if(cartTotal) cartTotal.innerHTML = `Rs.${grandTotal}`;
+    cartTotal.innerHTML = `Rs.${grandTotal}`;
 }
-
 function changeQuantity(index, amount) {
     if (!cart[index]) return;
+
     cart[index].quantity += amount;
+
     if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
     }
+
     updateCartCounter();
     showCartItems();
 }
