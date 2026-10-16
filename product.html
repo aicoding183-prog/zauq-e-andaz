@@ -4,462 +4,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Stone Chain and Ring | Zauq-e-Andaz</title>
+  <title>Product Details | Zauq-e-Andaz</title>
 
   <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f7f9fc;
+    .back-shop {
+      display: inline-block;
+      margin: 22px 0;
       color: #202938;
+      text-decoration: none;
+      font-weight: 600;
     }
 
-    .product-page {
-      max-width: 1100px;
-      margin: 25px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 24px;
-    }
-
-    .product-layout {
+    .detail-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 35px;
-      align-items: start;
+      background: #fff;
+      padding: 24px;
+      border-radius: 25px;
+      margin-bottom: 45px;
     }
 
-    .product-image {
+    .detail-image {
       width: 100%;
-      display: block;
+      max-height: 650px;
       object-fit: cover;
-      border-radius: 24px;
+      border-radius: 25px;
+      display: block;
     }
 
-    .product-info { padding: 15px 0; }
+    .detail-info { padding: 15px 0; }
 
-    .best-seller {
+    .detail-badge {
       display: inline-block;
       background: #000;
       color: #fff;
-      padding: 10px 22px;
       border-radius: 30px;
-      margin-bottom: 18px;
+      padding: 10px 22px;
+      margin-bottom: 15px;
     }
 
-    .product-info h1 {
-      font-size: clamp(27px, 4vw, 42px);
+    .detail-info h1 {
+      font-size: clamp(28px, 4vw, 46px);
       line-height: 1.35;
-      margin: 0 0 15px;
+      margin: 10px 0;
     }
 
-    .description {
-      font-size: 17px;
-      line-height: 1.8;
+    .detail-description {
       color: #666;
+      line-height: 1.8;
     }
 
-    .price {
+    .detail-price {
       font-size: 32px;
       font-weight: 700;
       margin: 20px 0;
     }
 
-    .old-price {
-      font-size: 21px;
+    .detail-old-price {
       color: #999;
+      font-size: 21px;
       text-decoration: line-through;
       margin-left: 12px;
     }
 
-    .cart-open-btn,
-    .add-cart-btn,
-    .whatsapp-btn {
+    .detail-add {
       width: 100%;
       padding: 15px;
       border: 0;
-      border-radius: 35px;
-      font-family: inherit;
+      border-radius: 30px;
+      background: #202938;
+      color: #fff;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       margin: 8px 0;
     }
 
-    .cart-open-btn { background: #f0f1f3; color: #202938; }
-    .add-cart-btn { background: #202938; color: white; }
-    .whatsapp-btn { background: #e5bf20; color: #111; }
-
-    /* Cart drawer */
-    .cart-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.45);
-      z-index: 9998;
-      display: none;
-    }
-
-    .cart-overlay.show { display: block; }
-
-    .cart-drawer {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: min(430px, 100%);
-      height: 100%;
-      background: white;
-      z-index: 9999;
-      transition: right .3s ease;
-      display: flex;
-      flex-direction: column;
-      padding: 22px;
-      box-shadow: -5px 0 20px rgba(0,0,0,.15);
-    }
-
-    .cart-drawer.show { right: 0; }
-
-    .cart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 15px;
-    }
-
-    .cart-header h2 { margin: 0; font-size: 24px; }
-
-    .close-cart {
+    .detail-whatsapp {
+      width: 100%;
+      padding: 15px;
       border: 0;
-      background: transparent;
-      font-size: 30px;
+      border-radius: 30px;
+      background: #e5bf20;
+      color: #111;
+      font-size: 16px;
+      font-weight: 600;
       cursor: pointer;
+      margin: 8px 0;
     }
 
-    .cart-items {
-      flex: 1;
-      overflow-y: auto;
-      padding: 15px 0;
+    .related-heading {
+      margin: 35px 0 20px;
     }
 
-    .cart-item {
-      display: grid;
-      grid-template-columns: 65px 1fr;
-      gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
+    .detail-not-found {
+      padding: 30px 0;
+      text-align: center;
     }
-
-    .cart-item img {
-      width: 65px;
-      height: 75px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .cart-item h3 { font-size: 14px; margin: 0 0 6px; }
-    .cart-item p { margin: 4px 0; font-size: 14px; }
-
-    .quantity-controls {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-top: 8px;
-    }
-
-    .quantity-controls button,
-    .remove-item {
-      padding: 4px 10px;
-      cursor: pointer;
-      background: white;
-      border: 1px solid #bbb;
-      border-radius: 5px;
-    }
-
-    .remove-item { margin-top: 7px; }
-
-    .cart-footer {
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
-    }
-
-    .total-row {
-      display: flex;
-      justify-content: space-between;
-      margin: 10px 0;
-    }
-
-    .total-row.final { font-size: 21px; font-weight: 700; }
 
     @media (max-width: 650px) {
-      .product-page {
-        margin: 10px;
+      .detail-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
         padding: 12px;
       }
 
-      .product-layout { grid-template-columns: 1fr; gap: 10px; }
-      .product-info { padding: 10px 0; }
-      .product-info h1 { font-size: 32px; }
-      .product-image { max-height: none; }
-      .cart-drawer { padding: 18px; }
+      .detail-image { max-height: none; }
+      .detail-info h1 { font-size: 32px; }
     }
   </style>
 </head>
 
 <body>
 
-  <main class="product-page">
-    <div class="product-layout">
-      <div>
-        <img
-          class="product-image"
-          src="images/product1.jpg"
-          alt="Black Stone Chain and Ring"
-        >
+  <!-- Original store header -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-left">
+        <i class="fa-solid fa-truck"></i>
+        Free delivery on orders above Rs.1500
+      </div>
+      <div class="top-right">
+        <i class="fa-solid fa-phone"></i> 0311-2656159
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Zauq-e-Andaz Logo">
+      </a>
+
+      <div class="brand">
+        <h1>Zauq-e-Andaz</h1>
+        <p>Fashion Accessories</p>
       </div>
 
-      <section class="product-info">
-        <span class="best-seller">Best Sellers</span>
-
-        <h1>Black Stone Chain and ring</h1>
-
-        <p class="description">
-          Elegant black stone chain with a premium finish.
-        </p>
-
-        <div class="price">
-          Rs.349 <span class="old-price">Rs.499</span>
+      <div class="header-actions">
+        <a href="index.html#products" class="icon-pill">
+          <i class="fa-solid fa-store"></i> Shop
+        </a>
+        <div class="cart" role="button" tabindex="0"
+             aria-label="Open shopping cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>0</span>
         </div>
-
-        <button type="button" class="cart-open-btn" id="openCartBtn">
-          🛒 View Shopping Cart (<span id="cartCount">0</span>)
-        </button>
-
-        <button type="button" class="add-cart-btn" id="addCartBtn">
-          ADD TO CART
-        </button>
-
-        <button type="button" class="whatsapp-btn" id="whatsappBtn">
-          ORDER ON WHATSAPP
-        </button>
-      </section>
+      </div>
     </div>
+
+    <nav>
+      <a href="index.html#products">All Categories</a>
+      <a href="index.html#products">Jewellery</a>
+      <a href="index.html#products">Accessories</a>
+      <a href="index.html#products">New Arrivals</a>
+      <a href="index.html#products">Best Sellers</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <a href="index.html#products" class="back-shop">
+      <i class="fa-solid fa-arrow-left"></i> Back to Shop
+    </a>
+
+    <div id="product-detail">
+      <p>Loading product...</p>
+    </div>
+
+    <section class="products" id="related-products">
+      <div class="section-title related-heading">
+        <h2>You May Also Like</h2>
+        <a href="index.html#products">View All →</a>
+      </div>
+
+      <div id="productCount"></div>
+      <div id="product-list" class="product-grid"></div>
+    </section>
+
   </main>
 
-  <div class="cart-overlay" id="cartOverlay"></div>
-
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+  <!-- Same cart sidebar used by index.html -->
+  <div class="cart-sidebar" id="cartSidebar">
     <div class="cart-header">
       <h2>Shopping Cart</h2>
-      <button type="button" class="close-cart" id="closeCartBtn"
-        aria-label="Close cart">×</button>
+      <span id="closeCart">&times;</span>
     </div>
 
-    <div class="cart-items" id="cartItems"></div>
+    <div id="cartItems">
+      <p class="empty-cart">Your cart is empty.</p>
+    </div>
 
     <div class="cart-footer">
-      <div class="total-row">
-        <span>Subtotal:</span><span id="cartSubtotal">Rs.0</span>
+      <div style="margin-bottom:12px;">
+        <div style="display:flex;justify-content:space-between;">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">Rs.0</span>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;">
+          <span>Delivery:</span>
+          <span>Rs.350</span>
+        </div>
+
+        <h3 style="display:flex;justify-content:space-between;border-top:1px dashed #ccc;padding-top:8px;margin:0;">
+          <span>Total:</span>
+          <span id="cartTotal">Rs.0</span>
+        </h3>
       </div>
-      <div class="total-row">
-        <span>Delivery:</span><span id="cartDelivery">Rs.350</span>
-      </div>
-      <div class="total-row final">
-        <span>Total:</span><span id="cartTotal">Rs.350</span>
-      </div>
-      <button type="button" class="whatsapp-btn" id="checkoutBtn">
+
+      <button class="checkout-btn" onclick="orderCartWhatsApp()">
         ORDER ON WHATSAPP
       </button>
     </div>
-  </aside>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div id="toast" class="toast"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
 
   <script>
-    const currentProduct = {
-      id: "black-stone-chain-ring",
-      name: "Black Stone Chain and ring",
-      price: 349,
-      image: "images/product1.jpg"
-    };
+    (() => {
+      const detail = document.getElementById("product-detail");
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id");
 
-    const drawer = document.getElementById("cartDrawer");
-    const overlay = document.getElementById("cartOverlay");
-    const itemsContainer = document.getElementById("cartItems");
-
-    // Keep this page's cart saved when the drawer closes.
-    let cart = [];
-
-    try {
-      cart = JSON.parse(localStorage.getItem("zauqCart") || "[]");
-      if (!Array.isArray(cart)) cart = [];
-    } catch (error) {
-      cart = [];
-    }
-
-    function openCart() {
-      drawer.classList.add("show");
-      overlay.classList.add("show");
-      renderCart();
-    }
-
-    function closeCart() {
-      drawer.classList.remove("show");
-      overlay.classList.remove("show");
-    }
-
-    function saveCart() {
-      localStorage.setItem("zauqCart", JSON.stringify(cart));
-      renderCart();
-    }
-
-    function addProduct() {
-      const found = cart.find(item => item.id === currentProduct.id);
-
-      if (found) {
-        found.quantity = Number(found.quantity || 1) + 1;
-      } else {
-        cart.push({ ...currentProduct, quantity: 1 });
-      }
-
-      saveCart();
-      openCart();
-    }
-
-    function changeQuantity(id, amount) {
-      const item = cart.find(product => product.id === id);
-      if (!item) return;
-
-      item.quantity = Number(item.quantity || 1) + amount;
-
-      if (item.quantity <= 0) {
-        cart = cart.filter(product => product.id !== id);
-      }
-
-      saveCart();
-    }
-
-    function removeProduct(id) {
-      cart = cart.filter(item => item.id !== id);
-      saveCart();
-    }
-
-    function renderCart() {
-      itemsContainer.innerHTML = "";
-
-      let subtotal = 0;
-      let count = 0;
-
-      cart.forEach(item => {
-        const quantity = Math.max(1, Number(item.quantity) || 1);
-        const price = Number(item.price) || 0;
-        subtotal += price * quantity;
-        count += quantity;
-
-        const row = document.createElement("div");
-        row.className = "cart-item";
-
-        const img = document.createElement("img");
-        img.src = item.image || "images/product1.jpg";
-        img.alt = item.name || "Product";
-
-        const details = document.createElement("div");
-        const name = document.createElement("h3");
-        name.textContent = item.name || "Product";
-
-        const priceText = document.createElement("p");
-        priceText.textContent = `Rs.${price} × ${quantity}`;
-
-        const controls = document.createElement("div");
-        controls.className = "quantity-controls";
-
-        const minus = document.createElement("button");
-        minus.type = "button";
-        minus.textContent = "−";
-        minus.addEventListener("click", () =>
-          changeQuantity(item.id, -1)
-        );
-
-        const qty = document.createElement("span");
-        qty.textContent = quantity;
-
-        const plus = document.createElement("button");
-        plus.type = "button";
-        plus.textContent = "+";
-        plus.addEventListener("click", () =>
-          changeQuantity(item.id, 1)
-        );
-
-        const remove = document.createElement("button");
-        remove.type = "button";
-        remove.className = "remove-item";
-        remove.textContent = "Remove";
-        remove.addEventListener("click", () => removeProduct(item.id));
-
-        controls.append(minus, qty, plus);
-        details.append(name, priceText, controls, remove);
-        row.append(img, details);
-        itemsContainer.appendChild(row);
-      });
-
-      if (cart.length === 0) {
-        itemsContainer.textContent = "Your cart is empty.";
-      }
-
-      const delivery = subtotal === 0 ? 0 : (subtotal >= 1499 ? 0 : 350);
-
-      document.getElementById("cartCount").textContent = count;
-      document.getElementById("cartSubtotal").textContent = `Rs.${subtotal}`;
-      document.getElementById("cartDelivery").textContent = `Rs.${delivery}`;
-      document.getElementById("cartTotal").textContent =
-        `Rs.${subtotal + delivery}`;
-    }
-
-    function orderWhatsApp() {
-      if (cart.length === 0) {
-        alert("Please add a product to your cart first.");
+      if (!Array.isArray(products)) {
+        detail.innerHTML =
+          '<p class="detail-not-found">Products could not be loaded.</p>';
         return;
       }
 
-      const lines = cart.map(item =>
-        `${item.name} × ${item.quantity} = Rs.${item.price * item.quantity}`
+      const product = products.find(
+        item => String(item.id) === String(productId)
       );
 
-      const subtotal = cart.reduce(
-        (sum, item) => sum + Number(item.price) * Number(item.quantity),
-        0
+      if (!product) {
+        detail.innerHTML = `
+          <div class="detail-not-found">
+            <h2>Product not found</h2>
+            <a href="index.html#products">Back to Shop</a>
+          </div>`;
+        return;
+      }
+
+      const oldPrice = product.oldPrice
+        ? `<span class="detail-old-price">Rs.${product.oldPrice}</span>`
+        : "";
+
+      detail.innerHTML = `
+        <section class="detail-layout">
+          <div>
+            <img class="detail-image"
+                 src="${product.image}"
+                 alt="${product.name}">
+          </div>
+
+          <div class="detail-info">
+            <span class="detail-badge">
+              ${product.sale ? "Best Sellers" : "Fashion Accessories"}
+            </span>
+
+            <h1>${product.name}</h1>
+            <p class="detail-description">
+              ${product.desc || "Premium quality fashion accessory."}
+            </p>
+
+            <div class="detail-price">
+              Rs.${product.price} ${oldPrice}
+            </div>
+
+            <button type="button" class="detail-add" id="detailAdd">
+              <i class="fa-solid fa-cart-shopping"></i> ADD TO CART
+            </button>
+
+            <button type="button" class="detail-whatsapp" id="detailWhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> ORDER ON WHATSAPP
+            </button>
+          </div>
+        </section>
+      `;
+
+      document.getElementById("detailAdd").addEventListener("click", () => {
+        addToCart(product.id);
+      });
+
+      document.getElementById("detailWhatsApp").addEventListener("click", () => {
+        orderWhatsApp(product.name, product.price);
+      });
+
+      // Exclude the current product from the related-products list.
+      const relatedProducts = products.filter(
+        item => String(item.id) !== String(product.id)
       );
-      const delivery = subtotal >= 1499 ? 0 : 350;
 
-      lines.push(
-        `Subtotal: Rs.${subtotal}`,
-        `Delivery: Rs.${delivery}`,
-        `Total: Rs.${subtotal + delivery}`
-      );
-
-      const message = encodeURIComponent(
-        "Assalam-o-Alaikum! I want to order:\n" + lines.join("\n")
-      );
-
-      // Replace 923001234567 with your WhatsApp number.
-      window.open(
-        "https://wa.me/923001234567?text=" + message,
-        "_blank"
-      );
-    }
-
-    document.getElementById("openCartBtn").addEventListener("click", openCart);
-    document.getElementById("addCartBtn").addEventListener("click", addProduct);
-    document.getElementById("closeCartBtn").addEventListener("click", closeCart);
-    document.getElementById("checkoutBtn").addEventListener("click", orderWhatsApp);
-    document.getElementById("whatsappBtn").addEventListener("click", orderWhatsApp);
-    overlay.addEventListener("click", closeCart);
-
-    renderCart();
+      renderProducts(relatedProducts);
+    })();
   </script>
 
 </body>
