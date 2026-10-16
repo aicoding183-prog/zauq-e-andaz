@@ -5,16 +5,10 @@
 
 let cart = [];
 
-try {
-    const savedCart = JSON.parse(
-        localStorage.getItem("zauqCart") || "[]"
-    );
+localStorage.removeItem("zauqCart");
 
-    if (Array.isArray(savedCart)) {
-        cart = savedCart;
-    }
-} catch (error) {
-    cart = [];
+function saveCart() {
+    localStorage.setItem("zauqCart", JSON.stringify(cart));
 }
 
 function saveCart() {
