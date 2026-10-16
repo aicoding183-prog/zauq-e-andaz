@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - Zauq-e-Andaz</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product - Zauq-e-Andaz</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
-<header class="main-header">
-    <div class="logo">
-        <a href="index.html">Zauq-e-Andaz</a>
-    </div>
-    <div class="cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>0</span>
-    </div>
-</header>
-
-<main class="product-detail-page">
-    <div id="product-detail-container">
-        <!-- Product will load here via JS -->
-        <p>Loading product...</p>
-    </div>
-</main>
-
-<!-- CART SIDEBAR - FIXED WITH DELIVERY -->
-<div id="cartOverlay" class="cart-overlay"></div>
-<div id="cartSidebar" class="cart-sidebar">
-    <div class="cart-header">
-        <h3>Your Cart</h3>
-        <span id="closeCart" class="close-cart">X</span>
-    </div>
-    
-    <div id="cartItems" class="cart-items">
-        <!-- Cart items here -->
-    </div>
-
-    <div class="cart-footer">
-        <div class="cart-summary">
-            <p>Subtotal: <span id="cartSubtotal">Rs.0</span></p>
-            <p>Delivery: <span id="cartDelivery">Rs.350</span></p>
-            <p class="total-bold">Total: <span id="cartTotal">Rs.0</span></p>
-        </div>
-        <button class="checkout-btn" onclick="orderCartWhatsApp()">Checkout on WhatsApp</button>
-    </div>
+<div id="cartOverlay"></div>
+<div id="cartSidebar">
+  <h3>Your Cart <span id="closeCart">X</span></h3>
+  <div id="cartItems"></div>
+  <div>
+    <p>Subtotal: <span id="cartSubtotal">Rs.0</span></p>
+    <p>Delivery: <span id="cartDelivery">Rs.350</span></p>
+    <p>Total: <span id="cartTotal">Rs.0</span></p>
+    <button onclick="orderCartWhatsApp()">Checkout on WhatsApp</button>
+  </div>
 </div>
 
-<div id="toast" class="toast"></div>
+<header>
+  <a href="index.html">Zauq-e-Andaz</a>
+  <div class="cart"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></div>
+</header>
+
+<div id="product-detail-container">Loading product...</div>
+<div id="toast"></div>
 
 <script src="products.js"></script>
-<script src="zauq-e-andaz.js"></script
+<script src="zauq-e-andaz.js"></script>
+<script src="product.js"></script>
+</body>
+</html>
