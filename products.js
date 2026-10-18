@@ -131,5 +131,4 @@ const products = [
     image:"images/product11.jpg",
     sale:true
 },
-
 ];
