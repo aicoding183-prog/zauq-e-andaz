@@ -96,7 +96,7 @@ const products = [
     sale:true
 },
 
-    {
+{
     id:9,
     name:"Gold Anklet Payal",
     category:"Payal / Anklet",
