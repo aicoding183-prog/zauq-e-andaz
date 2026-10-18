@@ -94,7 +94,7 @@ const products = [
     price:349,
     image:"images/product7.jpg",
     sale:true
-}
+},
 
     {
     id:9,
