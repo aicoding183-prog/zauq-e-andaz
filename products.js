@@ -96,4 +96,16 @@ const products = [
     sale:true
 }
 
+    {
+    id:9,
+    name:"Gold Anklet Payal",
+    category:"Payal / Anklet",
+    tag:"New Arrivals",
+    desc:"Gold plated anklet with heart charm and ghungroo. Mehndi wear.",
+    oldPrice:399,
+    price:199,
+    image:"images/product9.jpg",
+    sale:true
+},
+
 ];
