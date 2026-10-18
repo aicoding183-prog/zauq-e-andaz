@@ -108,4 +108,28 @@ const products = [
     sale:true
 },
 
+{
+    id:10,
+    name:"Royal Blue Chandbali",
+    category:"Chandbali Earrings",
+    tag:"New Arrivals",
+    desc:"Blue peacock chandbali with gold base and blue beads. Wedding wear.",
+    oldPrice:399,
+    price:199,
+    image:"images/product10.jpg",
+    sale:true
+},
+
+{
+    id:11,
+    name:"Meenakari Jhumka Set Grey Pink",
+    category:"Jhumka Set",
+    tag:"New Arrivals",
+    desc:"Grey pink meenakari jhumka with tikka, kundan and pearls. Bridal wear.",
+    oldPrice:399,
+    price:199,
+    image:"images/product11.jpg",
+    sale:true
+},
+
 ];
