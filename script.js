@@ -10,10 +10,6 @@ localStorage.removeItem("zauqCart");
 function saveCart() {
     localStorage.setItem("zauqCart", JSON.stringify(cart));
 }
-
-function saveCart() {
-    localStorage.setItem("zauqCart", JSON.stringify(cart));
-}
 let cartCount = 0;
 
 const productContainer = document.getElementById("product-list");
