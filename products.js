@@ -131,4 +131,52 @@ const products = [
     image:"images/product11.jpg",
     sale:true
 },
+
+{
+    id:12,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product12.jpg",
+    sale:true
+},
+
+ {
+    id:13,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product13.jpg",
+    sale:true
+},
+
+{
+    id:14,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product14.jpg",
+    sale:true
+},
+
+{
+    id:15,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product15.jpg",
+    sale:true
+},
 ];
