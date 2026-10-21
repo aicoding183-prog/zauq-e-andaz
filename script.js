@@ -3,7 +3,8 @@
 // ===============================
 
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("zauqCart") || "[]");
+
 function saveCart() {
     localStorage.setItem("zauqCart", JSON.stringify(cart));
 }
