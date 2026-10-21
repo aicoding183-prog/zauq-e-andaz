@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@
 
     .detail-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 35px;
       background: #fff;
       padding: 24px;
@@ -32,70 +33,84 @@
     .detail-image {
       width: 100%;
       max-height: 650px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      border-radius: 25px;
+      border-radius: 20px;
       display: block;
+      background: #f5f5f5;
     }
 
-    .detail-info { padding: 15px 0; }
+    .detail-info {
+      padding: 15px 0;
+      min-width: 0;
+    }
 
     .detail-badge {
       display: inline-block;
-      background: #000;
+      background: #202938;
       color: #fff;
       border-radius: 30px;
-      padding: 10px 22px;
+      padding: 8px 18px;
       margin-bottom: 15px;
+      font-size: 13px;
     }
 
     .detail-info h1 {
-      font-size: clamp(28px, 4vw, 46px);
+      font-size: clamp(26px, 4vw, 42px);
       line-height: 1.35;
       margin: 10px 0;
+      overflow-wrap: anywhere;
     }
 
     .detail-description {
       color: #666;
       line-height: 1.8;
+      margin: 14px 0;
     }
 
     .detail-price {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 700;
       margin: 20px 0;
+      color: #202938;
     }
 
     .detail-old-price {
       color: #999;
-      font-size: 21px;
+      font-size: 19px;
+      font-weight: 400;
       text-decoration: line-through;
-      margin-left: 12px;
+      margin-left: 8px;
     }
 
-    .detail-add {
-      width: 100%;
-      padding: 15px;
-      border: 0;
-      border-radius: 30px;
-      background: #202938;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      margin: 8px 0;
-    }
-
+    .detail-add,
     .detail-whatsapp {
       width: 100%;
       padding: 15px;
       border: 0;
       border-radius: 30px;
-      background: #e5bf20;
-      color: #111;
-      font-size: 16px;
+      font-family: inherit;
+      font-size: 15px;
       font-weight: 600;
       cursor: pointer;
       margin: 8px 0;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .detail-add {
+      background: #202938;
+      color: #fff;
+    }
+
+    .detail-whatsapp {
+      background: #e5bf20;
+      color: #111;
+    }
+
+    .detail-add:hover,
+    .detail-whatsapp:hover {
+      opacity: .9;
+      transform: translateY(-1px);
     }
 
     .related-heading {
@@ -103,40 +118,67 @@
     }
 
     .detail-not-found {
-      padding: 30px 0;
+      padding: 40px 15px;
       text-align: center;
+    }
+
+    .detail-not-found a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #202938;
+      font-weight: 600;
     }
 
     @media (max-width: 650px) {
       .detail-layout {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
         padding: 12px;
+        border-radius: 18px;
       }
 
-      .detail-image { max-height: none; }
-      .detail-info h1 { font-size: 32px; }
+      .detail-image {
+        max-height: none;
+      }
+
+      .detail-info {
+        padding: 10px 4px;
+      }
+
+      .detail-info h1 {
+        font-size: 28px;
+      }
+
+      .detail-price {
+        font-size: 26px;
+      }
+
+      .detail-old-price {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Original store header -->
   <div class="top-bar">
     <div class="container">
       <div class="top-left">
         <i class="fa-solid fa-truck"></i>
         Free delivery on orders above Rs.1500
       </div>
+
       <div class="top-right">
-        <i class="fa-solid fa-phone"></i> 0311-2656159
+        <i class="fa-solid fa-phone"></i>
+        0311-2656159
       </div>
     </div>
   </div>
 
   <header>
     <div class="container header">
+
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="Zauq-e-Andaz Logo">
       </a>
@@ -150,6 +192,7 @@
         <a href="index.html#products" class="icon-pill">
           <i class="fa-solid fa-store"></i> Shop
         </a>
+
         <div class="cart" role="button" tabindex="0"
              aria-label="Open shopping cart">
           <i class="fa-solid fa-cart-shopping"></i>
@@ -178,6 +221,7 @@
     </div>
 
     <section class="products" id="related-products">
+
       <div class="section-title related-heading">
         <h2>You May Also Like</h2>
         <a href="index.html#products">View All →</a>
@@ -185,12 +229,14 @@
 
       <div id="productCount"></div>
       <div id="product-list" class="product-grid"></div>
+
     </section>
 
   </main>
 
-  <!-- Same cart sidebar used by index.html -->
+  <!-- CART SIDEBAR -->
   <div class="cart-sidebar" id="cartSidebar">
+
     <div class="cart-header">
       <h2>Shopping Cart</h2>
       <span id="closeCart">&times;</span>
@@ -201,7 +247,9 @@
     </div>
 
     <div class="cart-footer">
+
       <div style="margin-bottom:12px;">
+
         <div style="display:flex;justify-content:space-between;">
           <span>Subtotal:</span>
           <span id="cartSubtotal">Rs.0</span>
@@ -212,21 +260,24 @@
           <span>Rs.350</span>
         </div>
 
-        <h3 style="display:flex;justify-content:space-between;border-top:1px dashed #ccc;padding-top:8px;margin:0;">
+        <h3 style="display:flex;justify-content:space-between;border-top:1px dashed #ccc;padding-top:8px;margin:8px 0 0;">
           <span>Total:</span>
           <span id="cartTotal">Rs.0</span>
         </h3>
+
       </div>
 
       <button class="checkout-btn" onclick="orderCartWhatsApp()">
         ORDER ON WHATSAPP
       </button>
+
     </div>
   </div>
 
   <div class="cart-overlay" id="cartOverlay"></div>
   <div id="toast" class="toast"></div>
 
+  <!-- IMPORTANT: Keep these scripts in this order -->
   <script src="products.js"></script>
   <script src="script.js"></script>
 
@@ -237,8 +288,11 @@
       const productId = params.get("id");
 
       if (!Array.isArray(products)) {
-        detail.innerHTML =
-          '<p class="detail-not-found">Products could not be loaded.</p>';
+        detail.innerHTML = `
+          <div class="detail-not-found">
+            <h2>Products could not be loaded</h2>
+            <a href="index.html#products">Back to Shop</a>
+          </div>`;
         return;
       }
 
@@ -261,18 +315,23 @@
 
       detail.innerHTML = `
         <section class="detail-layout">
+
           <div>
-            <img class="detail-image"
-                 src="${product.image}"
-                 alt="${product.name}">
+            <img
+              class="detail-image"
+              src="${product.image}"
+              alt="${product.name}"
+            >
           </div>
 
           <div class="detail-info">
+
             <span class="detail-badge">
-              ${product.sale ? "Best Sellers" : "Fashion Accessories"}
+              ${product.sale ? "Hot Deal" : "Fashion Accessories"}
             </span>
 
             <h1>${product.name}</h1>
+
             <p class="detail-description">
               ${product.desc || "Premium quality fashion accessory."}
             </p>
@@ -282,30 +341,40 @@
             </div>
 
             <button type="button" class="detail-add" id="detailAdd">
-              <i class="fa-solid fa-cart-shopping"></i> ADD TO CART
+              <i class="fa-solid fa-cart-shopping"></i>
+              ADD TO CART
             </button>
 
             <button type="button" class="detail-whatsapp" id="detailWhatsApp">
-              <i class="fa-brands fa-whatsapp"></i> ORDER ON WHATSAPP
+              <i class="fa-brands fa-whatsapp"></i>
+              ORDER ON WHATSAPP
             </button>
+
           </div>
         </section>
       `;
 
       document.getElementById("detailAdd").addEventListener("click", () => {
-        addToCart(product.id);
+        if (typeof addToCart === "function") {
+          addToCart(product.id);
+        } else {
+          alert("Cart could not load. Please refresh the page.");
+        }
       });
 
       document.getElementById("detailWhatsApp").addEventListener("click", () => {
-        orderWhatsApp(product.name, product.price);
+        if (typeof orderWhatsApp === "function") {
+          orderWhatsApp(product.name, product.price);
+        }
       });
 
-      // Exclude the current product from the related-products list.
       const relatedProducts = products.filter(
         item => String(item.id) !== String(product.id)
       );
 
-      renderProducts(relatedProducts);
+      if (typeof renderProducts === "function") {
+        renderProducts(relatedProducts);
+      }
     })();
   </script>
 
