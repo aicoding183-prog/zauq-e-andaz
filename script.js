@@ -4,9 +4,6 @@
 
 
 let cart = [];
-
-localStorage.removeItem("zauqCart");
-
 function saveCart() {
     localStorage.setItem("zauqCart", JSON.stringify(cart));
 }
