@@ -134,10 +134,10 @@ const products = [
 
 {
     id:12,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Golden Fan Ear Cuff Earrings",
+    category:"Jewellery / Earrings",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Trendy gold-plated fan design ear cuff with zircon chain. No piercing needed, stylish and lightweight for parties and daily wear. Premium quality fashion jewelry.",
     oldPrice:499,
     price:349,
     image:"images/product12.jpg",
@@ -146,10 +146,10 @@ const products = [
 
  {
     id:13,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
-    tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    name:"Pink Blossom Chandelier Jhumka Earrings",
+    category:"Jewellery / Jhumka",
+    tag:"New Arrivals",
+    desc:"Beautiful pink enamel chandelier jhumka with long golden chains and pearl jhumki drop. Lightweight traditional design perfect for Eid, weddings and festive occasions.",
     oldPrice:499,
     price:349,
     image:"images/product13.jpg",
@@ -158,10 +158,10 @@ const products = [
 
 {
     id:14,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
-    tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    name:"Antique Gold Black Beads Jhumka Earrings",
+    category:"Jewellery / Jhumka",
+    tag:"Traditional",
+    desc:"Classic antique gold round top jhumka with black stones and black beads tassel. High-quality gold-plated finish, gives royal look with green and black dresses.",
     oldPrice:499,
     price:349,
     image:"images/product14.jpg",
@@ -170,10 +170,10 @@ const products = [
 
 {
     id:15,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
-    tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    name:"Cute Star Baby Hair Clip Set - 10 Pcs",
+    category:"Accessories / Kids Accessories",
+    tag:"Kids Collection",
+    desc:"10 pieces cute star hair clips set for baby girls. Includes colorful mini star clips, star tic-tac clips and candy bow hair ponies. Soft, safe and perfect for daily school look.",
     oldPrice:499,
     price:349,
     image:"images/product15.jpg",
@@ -182,10 +182,10 @@ const products = [
 
 {
     id:16,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Gents Anchor Braided Leather Bracelet - Black Gold",
+    category:"Bracelets",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Premium black braided leather gents bracelet with gold anchor plate, magnetic lock, daily wear.",
     oldPrice:499,
     price:349,
     image:"images/product16.jpg",
@@ -194,10 +194,10 @@ const products = [
 
 {
     id:17,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Green Butterfly Heart Zircon Chain Bracelet",
+    category:"Women's Jewelry > Bracelets",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Gold plated chain bracelet with 2 green butterfly heart stones + 2 zircon butterflies, adjustable.",
     oldPrice:499,
     price:349,
     image:"images/product17.jpg",
@@ -206,10 +206,10 @@ const products = [
 
 {
     id:18,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Cartier Style Love Screw Bangle - Gold",
+    category:"Women's Jewelry > Bangles & Kada",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Stainless steel gold love bangle with screw design + single zircon, tarnish free, luxury look.",
     oldPrice:499,
     price:349,
     image:"images/product18.jpg",
@@ -218,10 +218,10 @@ const products = [
 
 {
     id:19,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Royal Dolphin Meenakari Kundan Jhumka Earrings",
+    category:"Women's Jewelry > Earrings > Jhumka",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"3-layer kundan earrings with blue dolphin meenakari work, pearl latkan + jhumki, wedding wear.",
     oldPrice:499,
     price:349,
     image:"images/product19.jpg",
@@ -230,10 +230,10 @@ const products = [
 
 {
     id:20,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Black Clover Star Charm Chain Bracelet",
+    category:"Women's Jewelry > Bracelets",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Silver chain with black leather inlay, black clover zircon charm + star drop, Van Cleef inspired.",
     oldPrice:499,
     price:349,
     image:"images/product20.jpg",
@@ -242,10 +242,10 @@ const products = [
 
 {
     id:21,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Champagne Gold Double Line Tennis Bracelet",
+    category:"Women's Jewelry > Bracelets > Tennis Bracelets",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Golden tennis bracelet with champagne + white baguette zircons, double line party wear.",
     oldPrice:499,
     price:349,
     image:"images/product21.jpg",
@@ -254,10 +254,10 @@ const products = [
 
 {
     id:22,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Black Floral Ethnic Jhumka Earrings with Pearl",
+    category:"Women's Jewelry > Earrings > Jhumka",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Black + brown textured floral jhumka with bell drop and small pearl, light weight festive earrings.",
     oldPrice:499,
     price:349,
     image:"images/product22.jpg",
@@ -266,10 +266,10 @@ const products = [
 
 {
     id:23,
-    name:"Black Stone Chain and ring",
-    category:"Jewellery",
+    name:"Black + brown textured floral jhumka with bell drop and small pearl, light weight festive earrings.",
+    category:"Man's > Women's Jewelry > Necklaces > Pendant",
     tag:"Best Sellers",
-    desc:"Elegant black stone chain with a premium finish.",
+    desc:"Long silver box chain with black enamel octagon bar pendant with gold border, unisex minimal chain.",
     oldPrice:499,
     price:349,
     image:"images/product23.jpg",
