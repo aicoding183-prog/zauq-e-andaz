@@ -179,4 +179,100 @@ const products = [
     image:"images/product15.jpg",
     sale:true
 },
+
+{
+    id:16,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product16.jpg",
+    sale:true
+},
+
+{
+    id:17,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product17.jpg",
+    sale:true
+},
+
+{
+    id:18,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product18.jpg",
+    sale:true
+},
+
+{
+    id:19,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product19.jpg",
+    sale:true
+},
+
+{
+    id:20,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product20.jpg",
+    sale:true
+},
+
+{
+    id:21,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product21.jpg",
+    sale:true
+},
+
+{
+    id:22,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product22.jpg",
+    sale:true
+},
+
+{
+    id:23,
+    name:"Black Stone Chain and ring",
+    category:"Jewellery",
+    tag:"Best Sellers",
+    desc:"Elegant black stone chain with a premium finish.",
+    oldPrice:499,
+    price:349,
+    image:"images/product23.jpg",
+    sale:true
+},
 ];
