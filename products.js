@@ -158,12 +158,12 @@ const products = [
 
 {
     id:14,
-    name:"kids",
-    category:"kids acc",
+    name:"kids collaction",
+    category:"kids acca",
     tag:"Traditional",
-    desc:kids
-    oldPrice:499,
-    price:349,
+    desc:"kids and 10 pcs.",
+    oldprice:99,
+    price:449,
     image:"images/product14.jpg",
     sale:true
 },
@@ -172,7 +172,7 @@ const products = [
     id:15,
     name:"Antique Gold Black Beads Jhumka Earrings",
     category:"jewellery / jhumka",
-    tag:"Kids Collection",    
+    tag:"best seller",    
     desc:"Classic antique gold round top jhumka with black stones and black beads tassel. High-quality gold-plated finish, gives royal look with green and black dresses.",
     oldPrice:499,
     price:349,
