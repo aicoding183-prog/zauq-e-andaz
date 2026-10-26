@@ -158,10 +158,10 @@ const products = [
 
 {
     id:14,
-    name:"Antique Gold Black Beads Jhumka Earrings",
-    category:"Jewellery / Jhumka",
+    name:"kids",
+    category:"kids acc",
     tag:"Traditional",
-    desc:"Classic antique gold round top jhumka with black stones and black beads tassel. High-quality gold-plated finish, gives royal look with green and black dresses.",
+    desc:kids
     oldPrice:499,
     price:349,
     image:"images/product14.jpg",
@@ -170,10 +170,10 @@ const products = [
 
 {
     id:15,
-    name:"Cute Star Baby Hair Clip Set - 10 Pcs",
-    category:"Accessories / Kids Accessories",
-    tag:"Kids Collection",
-    desc:"10 pieces cute star hair clips set for baby girls. Includes colorful mini star clips, star tic-tac clips and candy bow hair ponies. Soft, safe and perfect for daily school look.",
+    name:"Antique Gold Black Beads Jhumka Earrings",
+    category:"jewellery / jhumka",
+    tag:"Kids Collection",    
+    desc:"Classic antique gold round top jhumka with black stones and black beads tassel. High-quality gold-plated finish, gives royal look with green and black dresses.",
     oldPrice:499,
     price:349,
     image:"images/product15.jpg",
@@ -186,7 +186,7 @@ const products = [
     category:"Bracelets",
     tag:"Best Sellers",
     desc:"Premium black braided leather gents bracelet with gold anchor plate, magnetic lock, daily wear.",
-    oldPrice:499,
+    oldPrice:249,
     price:349,
     image:"images/product16.jpg",
     sale:true
@@ -198,8 +198,8 @@ const products = [
     category:"Women's Jewelry > Bracelets",
     tag:"Best Sellers",
     desc:"Gold plated chain bracelet with 2 green butterfly heart stones + 2 zircon butterflies, adjustable.",
-    oldPrice:499,
-    price:349,
+    oldPrice:299,
+    price:399,
     image:"images/product17.jpg",
     sale:true
 },
@@ -210,8 +210,8 @@ const products = [
     category:"Women's Jewelry > Bangles & Kada",
     tag:"Best Sellers",
     desc:"Stainless steel gold love bangle with screw design + single zircon, tarnish free, luxury look.",
-    oldPrice:499,
-    price:349,
+    oldPrice:299,
+    price:399,
     image:"images/product18.jpg",
     sale:true
 },
@@ -222,8 +222,8 @@ const products = [
     category:"Women's Jewelry > Earrings > Jhumka",
     tag:"Best Sellers",
     desc:"3-layer kundan earrings with blue dolphin meenakari work, pearl latkan + jhumki, wedding wear.",
-    oldPrice:499,
-    price:349,
+    oldPrice:399,
+    price:499,
     image:"images/product19.jpg",
     sale:true
 },
@@ -234,8 +234,8 @@ const products = [
     category:"Women's Jewelry > Bracelets",
     tag:"Best Sellers",
     desc:"Silver chain with black leather inlay, black clover zircon charm + star drop, Van Cleef inspired.",
-    oldPrice:499,
-    price:349,
+    oldPrice:299,
+    price:399,
     image:"images/product20.jpg",
     sale:true
 },
@@ -246,8 +246,8 @@ const products = [
     category:"Women's Jewelry > Bracelets > Tennis Bracelets",
     tag:"Best Sellers",
     desc:"Golden tennis bracelet with champagne + white baguette zircons, double line party wear.",
-    oldPrice:499,
-    price:349,
+    oldPrice:299,
+    price:399,
     image:"images/product21.jpg",
     sale:true
 },
@@ -258,7 +258,7 @@ const products = [
     category:"Women's Jewelry > Earrings > Jhumka",
     tag:"Best Sellers",
     desc:"Black + brown textured floral jhumka with bell drop and small pearl, light weight festive earrings.",
-    oldPrice:499,
+    oldPrice:249,
     price:349,
     image:"images/product22.jpg",
     sale:true
@@ -266,12 +266,12 @@ const products = [
 
 {
     id:23,
-    name:"Black + brown textured floral jhumka with bell drop and small pearl, light weight festive earrings.",
+    name:"locket premium look men's and women's.",
     category:"Man's > Women's Jewelry > Necklaces > Pendant",
     tag:"Best Sellers",
     desc:"Long silver box chain with black enamel octagon bar pendant with gold border, unisex minimal chain.",
-    oldPrice:499,
-    price:349,
+    oldPrice:250,
+    price:350,
     image:"images/product23.jpg",
     sale:true
 },
