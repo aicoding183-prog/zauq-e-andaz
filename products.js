@@ -138,7 +138,7 @@ const products = [
     category:"Jewellery / Earrings",
     tag:"Best Sellers",
     desc:"Trendy gold-plated fan design ear cuff with zircon chain. No piercing needed, stylish and lightweight for parties and daily wear. Premium quality fashion jewelry.",
-    oldPrice399,
+    oldPrice:399,
     price:299,
     image:"images/product12.jpg",
     sale:true
