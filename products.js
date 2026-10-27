@@ -146,8 +146,8 @@ const products = [
 
  {
     id:13,
-    name:"Pink Blossom Chandelier Jhumka Earrings",
-    category:"Jewellery / Jhumka",
+    name:"10 Pcs Kids Hair Accessories Card Set - Star Clips & Ponies",
+    category:"Kids Accessories > Hair Accessories > Hair Clips Set",
     tag:"New Arrivals",
     desc:"Beautiful pink enamel chandelier jhumka with long golden chains and pearl jhumki drop. Lightweight traditional design perfect for Eid, weddings and festive occasions.",
     oldPrice:499,
@@ -158,10 +158,10 @@ const products = [
 
 {
     id:14,
-    name:"kids collaction",
-    category:"kids acca",
-    tag:"Traditional",
-    desc:"kids and 10 pcs.",
+    name:"Traditional Gold Plated Black Stone Jhumka Earrings For Girls",
+    category:"Fashion Jewelry > Earrings > Jhumka Earrings",
+    tag:"New Arrivals",
+    desc:"Wedding Wear, Bridal Jhumka, Black Beads, Heavy Jhumka",
     oldprice:99,
     price:449,
     image:"images/product14.jpg",
@@ -170,10 +170,10 @@ const products = [
 
 {
     id:15,
-    name:"Antique Gold Black Beads Jhumka Earrings",
+    name:"Pink Meenakari Long Chain Jhumka Earrings With Pearls",
     category:"jewellery / jhumka",
     tag:"best seller",    
-    desc:"Classic antique gold round top jhumka with black stones and black beads tassel. High-quality gold-plated finish, gives royal look with green and black dresses.",
+    desc:" Kashmiri Jhumka, Chain Earrings, Pink Enamel, Party Wear",
     oldPrice:499,
     price:349,
     image:"images/product15.jpg",
