@@ -217,8 +217,7 @@ function orderCartWhatsApp() {
         subtotal += item.price * item.quantity;
         itemsText += `${item.name} x${item.quantity} - Rs.${item.price}\n`;
     });
-    let delivery = 350;
-    let grandTotal = subtotal + delivery;
+    let grandTotal = subtotal;
     let message = `Assalam O Alaikum,\n\nI want to order:\n\n${itemsText}\nSubtotal: Rs.${subtotal}\nDelivery Charges: Rs.${delivery}\nTotal: Rs.${grandTotal}`;
     window.open(`https://wa.me/923112656159?text=${encodeURIComponent(message)}`, '_blank');
 }
@@ -254,9 +253,9 @@ function showCartItems() {
             </div>
         `;
     });
-    let delivery = 350;
-    let grandTotal = total + delivery;
-    if(cartSubtotal) cartSubtotal.innerHTML = `Rs.${total}`;
+    let grandTotal = total;
+    if(cartSubtotal) cartSubtotal.style.display = "none";
+    if(cartDelivery) cartDelivery.style.display = "none";
     if(cartTotal) cartTotal.innerHTML = `Rs.${grandTotal}`;
 }
 
