@@ -284,7 +284,6 @@ I want to order:
 
 Product: ${productName}
 Price: Rs.${productPrice}
-Total: Rs.${productPrice}
 
 Please confirm my order.`;
 
