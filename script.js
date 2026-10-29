@@ -255,7 +255,6 @@ function showCartItems() {
     });
     let grandTotal = total;
     if(cartSubtotal) cartSubtotal.style.display = "none";
-    if(cartDelivery) cartDelivery.style.display = "none";
     if(cartTotal) cartTotal.innerHTML = `Rs.${grandTotal}`;
 }
 
