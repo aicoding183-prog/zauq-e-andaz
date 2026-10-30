@@ -90,8 +90,8 @@ const products = [
     category:"Jewellery",
     tag:"New Arrivals",
     desc:"Matte Black Cuff Bracelet",
-    oldPrice:599,
-    price:399,
+    oldPrice:399,
+    price:249,
     image:"images/product7.jpg",
     sale:true
 },
