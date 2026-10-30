@@ -18,8 +18,8 @@ const products = [
     category:"Jewellery",
     tag:"New Arrivals",
     desc:"Minimal bar pendant chain for everyday luxury.",
-    oldPrice:399,
-    price:199,
+    oldPrice:349,
+    price:280,
     image:"images/product2.jpg",
     sale:true
 },
