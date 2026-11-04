@@ -271,24 +271,35 @@ categoryLinks.forEach(link => {
 
 /* =====================================
    SINGLE PRODUCT WHATSAPP ORDER
-   No delivery charges
+   DELIVERY ADVANCE + PRODUCT COD
    ===================================== */
 
 function orderWhatsApp(productName, price) {
     const number = "923112656159";
     const productPrice = Number(price) || 0;
 
-    const message = `Assalam O Alaikum,
+    const message = `Assalam O Alaikum! ❤️
 
-I want to order:
+I want to order from Zauq-e-Andaz.
 
 Product: ${productName}
-Price: Rs.${productPrice}
+Product Price: Rs.${productPrice}
 
-Please confirm my order.`;
+Payment Method:
+Delivery Charges: Advance Payment
+Product Amount: Cash on Delivery (COD)
+
+Please confirm the delivery charges first.
+
+My Details:
+Name:
+City:
+Full Address:
+Phone Number:
+
+Please confirm my order. Thank you!`;
 
     const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-
     window.open(url, "_blank");
 }
 
@@ -353,7 +364,7 @@ if (newsletter) {
 
 /* =====================================
    CART WHATSAPP ORDER
-   Total = product prices only
+   DELIVERY ADVANCE + PRODUCT COD
    ===================================== */
 
 function orderCartWhatsApp() {
@@ -371,22 +382,32 @@ function orderCartWhatsApp() {
         const itemTotal = price * quantity;
 
         subtotal += itemTotal;
-
         itemsText += `${item.name} x ${quantity} = Rs.${itemTotal}\n`;
     });
 
-    const message = `Assalam O Alaikum,
+    const message = `Assalam O Alaikum! ❤️
 
-I want to order:
+I want to order from Zauq-e-Andaz.
 
+My Products:
 ${itemsText}
-Total: Rs.${subtotal}
+Product Subtotal: Rs.${subtotal}
 
-Please confirm my order.`;
+Payment Method:
+Delivery Charges: Advance Payment
+Product Amount: Cash on Delivery (COD)
 
-    const url =
-        `https://wa.me/923112656159?text=${encodeURIComponent(message)}`;
+Please confirm the delivery charges first.
 
+My Details:
+Name:
+City:
+Full Address:
+Phone Number:
+
+Please confirm my order. Thank you!`;
+
+    const url = `https://wa.me/923112656159?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
 }
 
